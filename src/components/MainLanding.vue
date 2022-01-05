@@ -14,8 +14,12 @@
 			</div>
 			<div class="exploreLinkContainer">
 				<router-link to="#"
-					>Ver todos os ajudantes <span>seta</span></router-link
-				>
+					>Ver todos os ajudantes
+					<img
+						src="../../public/assets/noun-arrow-1778571.svg"
+						id="arrow"
+						alt=""
+				/></router-link>
 			</div>
 		</div>
 	</div>
@@ -32,7 +36,7 @@ export default {
 					name: 'fotografia',
 					color: '#FFBA7A',
 					header: 'PRECISAS DE AJUDA EM FOTOGRAFIA?',
-					video: '../../public/assets/bgVideoLanding.mp4',
+					video: '../../assets/bgVideoLanding.mp4',
 				},
 				{
 					id: 1,
@@ -74,7 +78,7 @@ export default {
 <style scoped>
 .container {
 	margin-top: 71px;
-	height: 86vh;
+	height: 91vh;
 	display: flex;
 	align-items: center;
 	background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
@@ -117,7 +121,7 @@ h1 {
 
 .exploreLinkContainer {
 	margin-left: 3.5%;
-	padding-top: 30px;
+	padding-top: 25px;
 }
 
 a {
@@ -126,5 +130,12 @@ a {
 	font-family: 'Gilroy', sans-serif;
 	font-weight: 700;
 	font-size: 20px;
+	display: flex;
+	align-items: center;
+}
+
+#arrow {
+	width: 43px;
+	padding-left: 8px;
 }
 </style>
