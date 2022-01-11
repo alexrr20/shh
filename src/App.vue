@@ -20,7 +20,6 @@ export default {
 </script>
 <style>
 body {
-	background-color: black;
 	margin: 0;
 	padding: 0;
 }

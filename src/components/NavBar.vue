@@ -40,8 +40,12 @@
 		</div>
 		<div id="thirdDiv">
 			<router-link class="link" to="#">Oferecer Ajuda</router-link>
-			<router-link class="link" to="#">Explorar</router-link>
+			<router-link class="link" to="Explore">Explorar</router-link>
 			<router-link class="link" to="#">Mensagens</router-link>
+		</div>
+		<div id="fourthDiv">
+			<router-link class="link" to="#">Sign Up</router-link>
+			<router-link class="link" to="#">Login</router-link>
 		</div>
 	</nav>
 </template>
@@ -79,7 +83,7 @@ nav {
 	background-color: white;
 	display: grid;
 	grid-template-rows: auto;
-	grid-template-columns: minmax(80px, 10%) 563px 13% auto;
+	grid-template-columns: minmax(80px, 10%) 563px 13% auto auto;
 	position: fixed;
 	top: 0;
 	width: 100%;
