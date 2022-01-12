@@ -44,8 +44,8 @@
 			<router-link class="link" to="#">Mensagens</router-link>
 		</div>
 		<div id="fourthDiv">
-			<router-link class="link" to="#">Sign Up</router-link>
-			<router-link class="link" to="#">Login</router-link>
+			<router-link class="link" to="signup">Sign Up</router-link>
+			<router-link class="link" to="login">Login</router-link>
 		</div>
 	</nav>
 </template>

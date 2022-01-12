@@ -102,8 +102,9 @@
 			<div class="mainContentContainer">
 				<div class="sortContainer">
 					<span>Ordenar por:</span>
-					<div><span>Gostos &#40;Ascendente&#41;</span></div>
+					<div><span>Gostos &#40;ascendente&#41;</span></div>
 				</div>
+				<PostCards />
 			</div>
 		</div>
 	</div>
@@ -112,12 +113,23 @@
 <script>
 import CategoriesBar from '../components/CategoriesBar.vue';
 import AsideAccordion from '../components/AsideAccordion.vue';
+import PostCards from '../components/PostCards.vue';
 
 export default {
 	name: 'Explore',
 	components: {
 		CategoriesBar,
 		AsideAccordion,
+		PostCards,
+	},
+	data() {
+		return {
+			posts: this.$store.state.posts,
+			arrayCategories: this.$store.state.arrayCategories,
+		};
+	},
+	created() {
+		console.log(this.posts);
 	},
 };
 </script>
@@ -224,10 +236,24 @@ h5 {
 
 .sortContainer {
 	display: flex;
+	align-items: center;
+}
+
+.sortContainer > span {
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.sortContainer div span {
+	font-weight: 700;
+	font-size: 13px;
 }
 
 .sortContainer div {
 	background-color: black;
 	color: white;
+	margin-left: 20px;
+	cursor: pointer;
+	padding: 8px 20px;
 }
 </style>
