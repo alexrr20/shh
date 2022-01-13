@@ -41,10 +41,10 @@ export default new Vuex.Store({
 								complimentID: '',
 							},
 						],
-						likes: 13,
+						likes: 26,
 					},
 					{
-						postID: 0,
+						postID: 1,
 						userID: 555,
 						userName: 'Afonso',
 						category: {
@@ -76,8 +76,78 @@ export default new Vuex.Store({
 								complimentID: '',
 							},
 						],
-						likes: 13,
+						likes: 25,
 					},
+					{
+						postID: 2,
+						userID: 127,
+						userName: 'Ana',
+						category: {
+							id: 4,
+							name: 'Modelo',
+							color: '#ADFF90',
+							secondColor:
+							'invert(87%) sepia(34%) saturate(339%) hue-rotate(52deg) brightness(104%) contrast(97%)',
+							header: 'PRECISAS DE UM MODELO?',
+							video: '../../assets/bgVideoLanding5.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Consigo tornar o teu projeto viral em pouco tempo.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 4,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 4,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 22,
+					},
+					{
+						postID: 3,
+						userID: 129,
+						userName: 'Miguel',
+						category: {
+							id: 1,
+							name: 'Vídeo',
+							color: '#FF8BA0',
+							secondColor:
+								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
+							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
+							video: '../../assets/bgVideoLanding2.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Farei um vídeo para o teu projeto á tua maneira.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 3,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 3,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 19,
+					}
 			  ],
 		users: localStorage.users
 			? JSON.parse(localStorage.users)
