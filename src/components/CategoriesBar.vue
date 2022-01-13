@@ -2,19 +2,34 @@
 	<div class="container">
 		<div class="categoriesContainer">
 			<div class="category" id="category1">
-				<router-link to="#">Fotografia</router-link>
+				<router-link
+					:to="{ name: 'exploreCategory', params: { id: 0 } }"
+					>Fotografia</router-link
+				>
 			</div>
 			<div class="category" id="category2">
-				<router-link to="#">Vídeo</router-link>
+				<router-link
+					:to="{ name: 'exploreCategory', params: { id: 1 } }"
+					>Vídeo</router-link
+				>
 			</div>
 			<div class="category" id="category3">
-				<router-link to="#">Desenho</router-link>
+				<router-link
+					:to="{ name: 'exploreCategory', params: { id: 2 } }"
+					>Desenho</router-link
+				>
 			</div>
 			<div class="category" id="category4">
-				<router-link to="#">Web Design</router-link>
+				<router-link
+					:to="{ name: 'exploreCategory', params: { id: 3 } }"
+					>Web Design</router-link
+				>
 			</div>
 			<div class="category" id="category5">
-				<router-link to="#">Modelo</router-link>
+				<router-link
+					:to="{ name: 'exploreCategory', params: { id: 4 } }"
+					>Modelo</router-link
+				>
 			</div>
 		</div>
 	</div>

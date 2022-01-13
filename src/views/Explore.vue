@@ -1,7 +1,11 @@
 <template>
 	<div class="mainContainer">
 		<CategoriesBar />
-		<div class="contentContainer">
+		<router-view></router-view>
+		<div
+			class="contentContainer"
+			v-bind:class="{ contentContainerBanner: banner }"
+		>
 			<aside>
 				<h4>Filtros</h4>
 				<div class="filterContainer">
@@ -126,10 +130,26 @@ export default {
 		return {
 			posts: this.$store.state.posts,
 			arrayCategories: this.$store.state.arrayCategories,
+			banner: false,
 		};
 	},
+	methods: {
+		checkBanner() {
+			if (
+				this.$route.matched[this.$route.matched.length - 1].instances
+					.default === this
+			) {
+				this.banner = false;
+			} else {
+				this.banner = true;
+			}
+		},
+	},
 	created() {
-		console.log(this.posts);
+		this.checkBanner();
+	},
+	updated() {
+		this.checkBanner();
 	},
 };
 </script>
@@ -137,15 +157,21 @@ export default {
 <style>
 .mainContainer {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	height: 1000px;
 }
+
 .contentContainer {
 	width: 90%;
 	max-width: 1300px;
 	display: flex;
 	margin-top: 180px;
 	justify-content: space-between;
+}
+
+.contentContainerBanner {
+	margin-top: 0px;
 }
 
 aside {

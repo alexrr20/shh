@@ -40,7 +40,7 @@
 		</div>
 		<div id="thirdDiv">
 			<router-link class="link" to="#">Oferecer Ajuda</router-link>
-			<router-link class="link" to="Explore">Explorar</router-link>
+			<router-link class="link" to="explore">Explorar</router-link>
 			<router-link class="link" to="#">Mensagens</router-link>
 		</div>
 		<div id="fourthDiv">

@@ -152,6 +152,8 @@ export default new Vuex.Store({
 		getLoggedUser: (state) => state.loggedUser,
 		getPostsByCategory: (state) => (category) =>
 			state.posts.filter((post) => post.categoryID == category),
+		getCategoryByID: (state) => (id) =>
+			state.arrayCategories.filter((category) => category.id == id),
 	},
 	mutations: {
 		SET_LOGGED_USER(state, payload) {
