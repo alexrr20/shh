@@ -147,6 +147,215 @@ export default new Vuex.Store({
 							},
 						],
 						likes: 19,
+					},
+					{
+						postID: 4,
+						userID: 428,
+						userName: 'Matilde',
+						category: {
+							id: 1,
+							name: 'Vídeo',
+							color: '#FF8BA0',
+							secondColor:
+								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
+							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
+							video: '../../assets/bgVideoLanding2.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Eu consigo editar o teu vídepo promocional em qualquer plataforma.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 4,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 4,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 17,
+					},
+					{
+						postID: 5,
+						userID: 86,
+						userName: 'Tomás',
+						category: {
+							id: 0,
+							name: 'Fotografia',
+							color: '#FFBA7A',
+							secondColor:
+								'invert(100%) sepia(35%) saturate(1828%) hue-rotate(299deg) brightness(99%) contrast(105%)',
+							header: 'PRECISAS DE AJUDA EM FOTOGRAFIA?',
+							video: '../../assets/bgVideoLanding.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Farei um vídeo para o teu projeto á tua maneira.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 3,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 3,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 16,
+					},
+					{
+						postID: 3,
+						userID: 129,
+						userName: 'Miguel',
+						category: {
+							id: 1,
+							name: 'Vídeo',
+							color: '#FF8BA0',
+							secondColor:
+								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
+							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
+							video: '../../assets/bgVideoLanding2.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Farei um vídeo para o teu projeto á tua maneira.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 3,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 3,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 19,
+					},
+					{
+						postID: 3,
+						userID: 129,
+						userName: 'Miguel',
+						category: {
+							id: 1,
+							name: 'Vídeo',
+							color: '#FF8BA0',
+							secondColor:
+								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
+							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
+							video: '../../assets/bgVideoLanding2.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Farei um vídeo para o teu projeto á tua maneira.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 3,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 3,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 19,
+					},
+					{
+						postID: 3,
+						userID: 129,
+						userName: 'Miguel',
+						category: {
+							id: 1,
+							name: 'Vídeo',
+							color: '#FF8BA0',
+							secondColor:
+								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
+							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
+							video: '../../assets/bgVideoLanding2.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Farei um vídeo para o teu projeto á tua maneira.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 3,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 3,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 19,
+					},{
+						postID: 3,
+						userID: 129,
+						userName: 'Miguel',
+						category: {
+							id: 1,
+							name: 'Vídeo',
+							color: '#FF8BA0',
+							secondColor:
+								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
+							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
+							video: '../../assets/bgVideoLanding2.mp4',
+						},
+						photos: [],
+						shortDescription:
+							'Farei um vídeo para o teu projeto á tua maneira.',
+						description: '',
+						faq: [
+							{
+								title: '',
+								description: '',
+							},
+						],
+						overallRating: 3,
+						reviews: [
+							{
+								reviewID: 0,
+								rating: 3,
+								description: '',
+								date: '15/12/2021',
+								complimentID: '',
+							},
+						],
+						likes: 19,
 					}
 			  ],
 		users: localStorage.users
