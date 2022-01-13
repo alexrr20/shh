@@ -198,7 +198,7 @@ export default new Vuex.Store({
 						},
 						photos: [],
 						shortDescription:
-							'Farei um vídeo para o teu projeto á tua maneira.',
+							'Tenho disponiblilidade para fotografar qualquer coisa(pessoas/objetos).',
 						description: '',
 						faq: [
 							{
@@ -206,11 +206,11 @@ export default new Vuex.Store({
 								description: '',
 							},
 						],
-						overallRating: 3,
+						overallRating: 5,
 						reviews: [
 							{
 								reviewID: 0,
-								rating: 3,
+								rating: 5,
 								description: '',
 								date: '15/12/2021',
 								complimentID: '',
@@ -219,21 +219,21 @@ export default new Vuex.Store({
 						likes: 16,
 					},
 					{
-						postID: 3,
-						userID: 129,
-						userName: 'Miguel',
+						postID: 6,
+						userID: 39,
+						userName: 'Gabriel',
 						category: {
-							id: 1,
-							name: 'Vídeo',
-							color: '#FF8BA0',
+							id: 4,
+							name: 'Modelo',
+							color: '#ADFF90',
 							secondColor:
-								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
-							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
-							video: '../../assets/bgVideoLanding2.mp4',
+								'invert(87%) sepia(34%) saturate(339%) hue-rotate(52deg) brightness(104%) contrast(97%)',
+							header: 'PRECISAS DE UM MODELO?',
+							video: '../../assets/bgVideoLanding5.mp4',
 						},
 						photos: [],
 						shortDescription:
-							'Farei um vídeo para o teu projeto á tua maneira.',
+							'Estou disponível para ser fotografado a qualquer altura do dia.',
 						description: '',
 						faq: [
 							{
@@ -251,24 +251,24 @@ export default new Vuex.Store({
 								complimentID: '',
 							},
 						],
-						likes: 19,
+						likes: 15,
 					},
 					{
-						postID: 3,
-						userID: 129,
-						userName: 'Miguel',
+						postID: 7,
+						userID: 790,
+						userName: 'Martim',
 						category: {
-							id: 1,
-							name: 'Vídeo',
-							color: '#FF8BA0',
+							id: 3,
+							name: 'Web design',
+							color: '#58D9F5',
 							secondColor:
-								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
-							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
-							video: '../../assets/bgVideoLanding2.mp4',
+								'invert(86%) sepia(16%) saturate(873%) hue-rotate(175deg) brightness(105%) contrast(104%)',
+							header: 'PRECISAS DE AJUDA EM WEB DESIGN?',
+							video: '../../assets/bgVideoLanding4.mp4',
 						},
 						photos: [],
 						shortDescription:
-							'Farei um vídeo para o teu projeto á tua maneira.',
+							'Eu consigo criar um design único para o seu website',
 						description: '',
 						faq: [
 							{
@@ -276,17 +276,17 @@ export default new Vuex.Store({
 								description: '',
 							},
 						],
-						overallRating: 3,
+						overallRating: 2,
 						reviews: [
 							{
 								reviewID: 0,
-								rating: 3,
+								rating: 2,
 								description: '',
 								date: '15/12/2021',
 								complimentID: '',
 							},
 						],
-						likes: 19,
+						likes: 13,
 					},
 					{
 						postID: 3,
