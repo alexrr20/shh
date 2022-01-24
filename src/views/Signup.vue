@@ -39,7 +39,7 @@
 					<input type="password"  id="confirmPassword">
 					<br>
 					<h4>A tua palavra-passe deve conter entre 8 e 16 caracteres.</h4>
-					<input type="submit" value="Criar Conta">
+					<input type="submit" value="Criar Conta"><p>Ao criares conta estás a concordar com os termos de <b>utilização</b> e de <b>privacidade</b></p>
 				</form>
 			</div>
 		</div>
