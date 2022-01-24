@@ -87,7 +87,7 @@ export default new Vuex.Store({
 							name: 'Modelo',
 							color: '#ADFF90',
 							secondColor:
-							'invert(87%) sepia(34%) saturate(339%) hue-rotate(52deg) brightness(104%) contrast(97%)',
+								'invert(87%) sepia(34%) saturate(339%) hue-rotate(52deg) brightness(104%) contrast(97%)',
 							header: 'PRECISAS DE UM MODELO?',
 							video: '../../assets/bgVideoLanding5.mp4',
 						},
@@ -322,7 +322,8 @@ export default new Vuex.Store({
 							},
 						],
 						likes: 19,
-					},{
+					},
+					{
 						postID: 3,
 						userID: 129,
 						userName: 'Miguel',
@@ -356,7 +357,7 @@ export default new Vuex.Store({
 							},
 						],
 						likes: 19,
-					}
+					},
 			  ],
 		users: localStorage.users
 			? JSON.parse(localStorage.users)
@@ -420,6 +421,7 @@ export default new Vuex.Store({
 				video: '../../assets/bgVideoLanding5.mp4',
 			},
 		],
+		search: '',
 	},
 	getters: {
 		isUser: (state) => (email, password) =>
@@ -444,6 +446,9 @@ export default new Vuex.Store({
 		SET_LOGOUT(state) {
 			state.loggedUser = null;
 			localStorage.removeItem('loggedUser');
+		},
+		updateSearch(state, input) {
+			state.search = input;
 		},
 	},
 	actions: {},

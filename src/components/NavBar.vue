@@ -16,9 +16,10 @@
 					<span v-else>Categoria</span>
 				</div>
 				<div class="inputContainer">
-					<input type="text" />
+					<input type="text" v-model="search" />
 				</div>
-				<button>Procurar</button>
+
+				<router-link id="btnSearch" to="explore">Procurar</router-link>
 			</div>
 			<div id="secondDivBottom" v-bind:class="categoriesToggle">
 				<span class="category 0" @click="addTag($event)" id="category1"
@@ -72,6 +73,16 @@ export default {
 				this.navSize = 'short';
 				this.categoriesToggle = 'hidden';
 			}
+		},
+	},
+	computed: {
+		search: {
+			get() {
+				return this.$store.state.search;
+			},
+			set(value) {
+				this.$store.commit('updateSearch', value);
+			},
 		},
 	},
 };
@@ -141,7 +152,7 @@ nav {
 	padding-left: 20px;
 }
 
-#secondDiv button {
+#secondDiv a {
 	grid-column: 4 / 5;
 	background-color: white;
 	height: 35px;
@@ -158,13 +169,14 @@ nav {
 	transition: all 0.08s ease-in-out;
 	align-self: end;
 	font-size: 13px;
+	text-decoration: none;
 }
 
-#secondDiv button:hover {
+#secondDiv a:hover {
 	font-size: 15px;
 }
 
-#secondDiv button:active {
+#secondDiv a:active {
 	font-size: 12.3px;
 }
 
