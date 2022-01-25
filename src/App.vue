@@ -16,8 +16,8 @@ export default {
   name: "app",
   components: {
     NavBar,
-    Footer,
-    Login, // register component
+    Login,
+    Footer, // register component
   },
 };
 </script>
