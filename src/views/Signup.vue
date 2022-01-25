@@ -77,7 +77,26 @@ export default {
     };
   },
   created() {
-    this.users = this.$store.state.users;
+    this.users = localStorage.users
+      ? JSON.parse(localStorage.users)
+      : [
+          {
+            userID: 444,
+            userName: "Pedro",
+            surname: "Gomes",
+            email: "admin",
+            password: "admin",
+            type: "admin",
+            dob: "",
+            nif: "",
+            helper: true,
+          },
+        ];
+  },
+    watch: {
+    users() {
+      localStorage.setItem("users", JSON.stringify(this.users));
+    },
   },
   computed: {
     ...mapGetters(["isUserAvailable"]),
