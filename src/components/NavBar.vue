@@ -16,7 +16,7 @@
 					<span v-else>Categoria</span>
 				</div>
 				<div class="inputContainer">
-					<input type="text" v-model="search" />
+					<input type="text" v-model="search" @click="updatePosts" />
 				</div>
 
 				<router-link id="btnSearch" to="explore">Procurar</router-link>
@@ -73,6 +73,9 @@ export default {
 				this.navSize = 'short';
 				this.categoriesToggle = 'hidden';
 			}
+		},
+		updatePosts() {
+			this.$store.commit('SET_POSTS_BY_SEARCH');
 		},
 	},
 	computed: {
@@ -170,6 +173,9 @@ nav {
 	align-self: end;
 	font-size: 13px;
 	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #secondDiv a:hover {

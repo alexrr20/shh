@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import Explore from '../views/Explore.vue';
 import ExploreCategory from '../views/ExploreCategory.vue';
 import Signup from '../views/Signup.vue';
+import OfferHelp from '../views/OfferHelp.vue';
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,11 @@ const routes = [
 		path: '/signup',
 		name: 'signup',
 		component: Signup,
+	},
+	{
+		path: '/offerhelp',
+		name: 'OfferHelp',
+		component: OfferHelp,
 	},
 ];
 

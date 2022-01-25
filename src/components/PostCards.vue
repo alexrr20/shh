@@ -90,7 +90,7 @@ export default {
 	name: 'PostCard',
 	data() {
 		return {
-			posts: this.$store.state.posts,
+			posts: this.$store.state.filteredPosts,
 			cardShadow:
 				'3px -3px 28px -8px rgba(0, 0, 0, 0.1), inset -5px -23px 0px -13px',
 			opacity: '',

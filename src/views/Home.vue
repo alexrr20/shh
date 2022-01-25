@@ -59,7 +59,7 @@
 			<div class="contentContainer1">
 				<h1>Queres te tornar num ajudante?</h1>
 				<div class="routerContainer">
-					<router-link to="#">Começa já</router-link>
+					<router-link to="OfferHelp">Começa já</router-link>
 				</div>
 				<div class="advantagesContainer">
 					<span>

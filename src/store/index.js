@@ -422,6 +422,7 @@ export default new Vuex.Store({
 			},
 		],
 		search: '',
+		filteredPosts: [],
 	},
 	getters: {
 		isUser: (state) => (email, password) =>
@@ -449,6 +450,14 @@ export default new Vuex.Store({
 		},
 		updateSearch(state, input) {
 			state.search = input;
+		},
+		SET_POSTS_BY_SEARCH(state) {
+			state.filteredPosts = state.posts.filter((post) =>
+				post.userName.includes(state.search)
+			);
+		},
+		SET_ALL_POSTS(state) {
+			state.filteredPosts = state.posts;
 		},
 	},
 	actions: {},
