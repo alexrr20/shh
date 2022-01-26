@@ -52,8 +52,11 @@
 				>Editar Perfil</router-link
 			>
 			<router-link class="link" to="signup">Sign Up</router-link>
-			<router-link class="link" v-on:click.native="showDialog" to=""
+			<router-link class="link" v-on:click.native="showDialog" to="" v-bind:style="{visibility: showLogin}"
 				>Login</router-link
+			>
+      <router-link class="link" v-on:click.native="logout" to="" v-bind:style="{visibility: showLogout}"
+			>Logout</router-link
 			>
 		</div>
 		<div class="dialog">
@@ -85,6 +88,8 @@ export default {
 			password: '',
 			isDialogOpen: false,
 			showEdit: 'none',
+      showLogin: 'visible',
+      showLogout: 'hidden'
 		};
 	},
 	methods: {
@@ -94,12 +99,21 @@ export default {
 		login() {
 			if (this.isUser(this.email, this.password)) {
 				this.SET_LOGGED_USER(this.email);
+        this.showLogin = 'hidden';
+        this.showLogout = 'visible';
+        //this.showEdit = 'visible';
 			} else {
 				alert('NENHUM UTILIZADOR ENCONTRADO');
+        this.showEdit = 'hidden';
 			}
 			this.isDialogOpen = false;
 		},
-		...mapMutations(['SET_LOGGED_USER']),
+    logout(){
+      this.SET_LOGOUT(this.email);
+      this.showLogin = 'visible';
+      this.showLogout = 'hidden';
+    },
+		...mapMutations(['SET_LOGGED_USER','SET_LOGOUT']),
 
 		addTag(e) {
 			this.tagSearch = e.target.innerHTML;
