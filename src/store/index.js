@@ -439,6 +439,10 @@ export default new Vuex.Store({
       state.arrayCategories.filter((category) => category.id == id),
   },
   mutations: {
+    SET_NEW_USER(state, payload) {
+      state.users.push(payload);
+      localStorage.users = JSON.stringify(state.users);
+    },
     SET_LOGGED_USER(state, payload) {
       state.loggedUser = state.users.find((user) => user.email === payload);
       localStorage.loggedUser = JSON.stringify(state.loggedUser);

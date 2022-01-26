@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
 	name: 'Signup',
 	components: {},
@@ -93,6 +93,7 @@ export default {
 				nif: '',
 				password: '',
 				confirmPassword: '',
+				type:'user',
 			},
 			users: [],
 		};
@@ -128,22 +129,12 @@ export default {
 				this.isUserAvailable(this.form.email) &&
 				this.form.password == this.form.confirmPassword
 			) {
-				const newUser = {
-					userID: 444,
-					userName: this.form.name,
-					surname: this.form.surname,
-					email: this.form.email,
-					password: this.form.password,
-					type: 'user',
-					dob: this.form.dob,
-					nif: this.form.nif,
-					helper: true,
-				};
-				this.users.push(newUser);
+				this.SET_NEW_USER(this.form);
 			} else {
 				alert('NOP');
 			}
 		},
+		...mapMutations(['SET_NEW_USER']),
 	},
 };
 </script>
