@@ -137,6 +137,7 @@ export default {
       this.SET_LOGOUT(this.email);
       this.showLogin = 'visible';
       this.showLogout = 'hidden';
+	  this.showEdit = 'hidden';
     },
 		...mapMutations(['SET_LOGGED_USER','SET_LOGOUT']),
 
