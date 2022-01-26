@@ -92,7 +92,7 @@
 			<div class="contentContainer2">
 				<h1>Ainda não criaste conta? Tu é que perdes...</h1>
 				<h2>
-					<router-link to="#">Sign Up</router-link>
+					<router-link to="signup">Sign Up</router-link>
 				</h2>
 				<h2>
 					<router-link to="#">Login</router-link>

@@ -24,7 +24,7 @@
                         <td>{{ user.nif }}</td>
                         <td>{{ user.dob }}</td>
                         <td>{{ user.password }}</td>
-                        <td><button @click="removeUser">REMOVER UTILIZADOR</button></td>
+                        <td><button @click="SET_REMOVE_USER(user.email)">REMOVER UTILIZADOR</button></td>
                     </tr>
                 </table>
             </div>
@@ -44,10 +44,7 @@ import { mapGetters, mapMutations } from 'vuex';
             ...mapGetters(['getUsers']),
         },
         methods: {
-            removeUser() {
-                // this.SET_REMOVE_USER(this.getUsers.user.email)
-            },
-            ...mapMutations(['SET_REMOVE_USER'])
+            ...mapMutations(['SET_REMOVE_USER']),
         },
     }
 </script>
