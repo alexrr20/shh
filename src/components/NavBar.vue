@@ -64,7 +64,7 @@
 			<router-link
 				class="link"
 				v-on:click.native="logout"
-				to=""
+				to="/"
 				v-bind:style="{ display: showLogout }"
 				>Logout</router-link
 			>
