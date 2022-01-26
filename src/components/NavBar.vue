@@ -112,7 +112,7 @@ export default {
 			email: '',
 			password: '',
 			isDialogOpen: false,
-			showEdit: 'none',
+			showEdit: 'hidden',
       		showLogin: 'visible',
       		showLogout: 'hidden'
 		};
