@@ -1,15 +1,11 @@
 <template>
-    <div>
-
-    </div>
+	<div class="mainContainer"></div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+	name: 'EditProfile',
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style scoped></style>
