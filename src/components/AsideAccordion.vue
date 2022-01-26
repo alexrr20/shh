@@ -35,4 +35,28 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.up {
+	transform: rotate(180deg);
+}
+
+.down {
+	transform: rotate(0deg);
+}
+
+.filterHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+}
+
+h5 {
+	margin: 0;
+}
+
+.filterHeader img {
+	height: 27px;
+}
+</style>

@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .bannerContainer {
 	width: 100%;
 	height: 210px;

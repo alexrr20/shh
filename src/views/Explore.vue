@@ -154,7 +154,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .mainContainer {
 	display: flex;
 	flex-direction: column;
@@ -182,30 +182,6 @@ aside {
 aside h4 {
 	color: rgba(0, 0, 0, 0.34);
 	font-weight: 800;
-}
-
-.filterHeader {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: 10px 0 0 0;
-	cursor: pointer;
-}
-
-h5 {
-	margin: 0;
-}
-
-.filterHeader img {
-	height: 27px;
-}
-
-.up {
-	transform: rotate(180deg);
-}
-
-.down {
-	transform: rotate(0deg);
 }
 
 .categoryRadioContainer {
