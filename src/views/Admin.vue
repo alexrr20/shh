@@ -5,7 +5,7 @@
                 Página de Administrador
             </h1>
             <div class="tableContainer">
-                <table>
+                <table border="3">
                     <tr>
                         <th>ID</th>
                         <th>NOME</th>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapGetters } from 'vuex';
     export default {
         name:'Admin',
         data() {
