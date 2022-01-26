@@ -85,7 +85,7 @@ export default {
 	data() {
 		return {
 			form: {
-				name: '',
+				userName: '',
 				surname: '',
 				number: '',
 				dob: '',

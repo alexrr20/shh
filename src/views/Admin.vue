@@ -12,7 +12,19 @@
                         <th>EMAIL</th>
                         <th>NR ALUNO</th>
                         <th>NIF</th>
-                        <th>DATA NAS</th>
+                        <th>DATA NASCIMENTO</th>
+                        <th>PASSWORD</th>
+                        <th>AÇÕES POSSIVEÍS</th>
+                    </tr>
+                    <tr v-for="(user, index) in getUsers" :key="index">
+                        <td>{{ index + 1 }}</td>
+                        <td>{{ user.userName }} {{ user.surname }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.number }}</td>
+                        <td>{{ user.nif }}</td>
+                        <td>{{ user.dob }}</td>
+                        <td>{{ user.password }}</td>
+                        <td><button>REMOVER UTILIZADOR</button></td>
                     </tr>
                 </table>
             </div>
@@ -21,8 +33,16 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
     export default {
-        
+        name:'Admin',
+        data() {
+            return {
+            }
+        },
+        computed: {
+            ...mapGetters(['getUsers']),
+        },
     }
 </script>
 
