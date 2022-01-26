@@ -42,7 +42,7 @@
     </div>
     <div id="fourthDiv">
       <router-link class="link" to="signup">Sign Up</router-link>
-      <router-link class="link" v-on:click.native="showDialog" to="/">Login</router-link>
+      <router-link class="link" v-on:click.native="showDialog" to="">Login</router-link>
     </div>
     <div class="dialog">
     <dialog :open="isDialogOpen">
