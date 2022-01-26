@@ -9,9 +9,7 @@
 				height="100"
 			/>
 			<h1>Olá {{ getLoggedUser.userName }}!</h1>
-			<br />
 			<h4>Informações do Utilizador</h4>
-			<hr />
 			<div class="editContainer">
 				<button>Editar</button><br />
 				<span
