@@ -1,5 +1,93 @@
 <template>
 	<div class="mainContainer">
+		<div class="mainContentContainer">
+			<div class="category" id="category1">
+				<router-link
+					:to="{ name: 'exploreCategory', params: { id: 0 } }"
+					>Fotografia</router-link
+				>
+			</div>
+			<img src="../../public/assets/placeholderPostPhoto.jpeg" alt="" />
+			<div class="descriptionContainer">
+				<h4>Descrição</h4>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Eaque consectetur aut suscipit? Magni doloremque officiis
+					debitis dicta ad deserunt quam exercitationem culpa nobis.
+					In molestias soluta nobis maiores! Voluptatibus, nemo?
+				</p>
+			</div>
+			<div class="divider"></div>
+			<div class="faqContainer">
+				<h4>Perguntas Frequentes</h4>
+				<div class="questionContainer">
+					<div
+						class="filterHeader"
+						@click="toggleAccordion()"
+						:aria-expanded="isOpen"
+						:aria-controls="`collapse${_uid}`"
+					>
+						<p>
+							Em que dias da semana estás disponível para tirar
+							fotos?
+						</p>
+						<img
+							src="../../public/assets/noun-arrow-2601642.svg"
+							alt=""
+							:class="{ down: isOpen, up: !isOpen }"
+						/>
+					</div>
+					<div
+						class="filterContent"
+						v-show="isOpen"
+						:id="`collapse${_uid}`"
+					>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing
+							elit. Modi et iste, sapiente mollitia dolorem neque
+							quaerat aliquam autem dicta ratione. Iste tempore
+							nesciunt odit possimus enim doloribus nemo!
+							Voluptate, excepturi?
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div class="ratingContainer">
+				<h4>Avaliação</h4>
+				<div class="ratingContainer1">
+					<div class="starsContainer">
+						<img
+							src="../../public/assets/noun-star-1187057.svg"
+							alt=""
+							class="star 1"
+						/>
+						<img
+							src="../../public/assets/noun-star-1187057.svg"
+							alt=""
+							class="star 2"
+						/>
+						<img
+							src="../../public/assets/noun-star-1187057.svg"
+							alt=""
+							class="star 3"
+						/>
+						<img
+							src="../../public/assets/noun-star-1187057.svg"
+							alt=""
+							class="star 4"
+						/>
+						<img
+							src="../../public/assets/noun-star-1187057.svg"
+							alt=""
+							class="star 5"
+						/>
+					</div>
+					<span class="overallRating">4</span>
+					<span class="numRating">2 Avaliações</span>
+				</div>
+			</div>
+		</div>
 		<aside>
 			<div>
 				<img
@@ -14,7 +102,7 @@
 			<h2>Tecnologias e Sistemas de Informação para Web</h2>
 			<h2>2º Ano</h2>
 			<div class="divider"></div>
-			<div>
+			<div class="ratingContainer">
 				<div class="starsContainer">
 					<img
 						src="../../public/assets/noun-star-1187057.svg"
@@ -42,8 +130,8 @@
 						class="star 5"
 					/>
 				</div>
-				<span>4</span>
-				<span>2 Avaliações</span>
+				<span class="overallRating">4</span>
+				<span class="numRating">2 Avaliações</span>
 			</div>
 			<div>
 				<router-link to="#" id="btnMessage"
@@ -55,33 +143,47 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			isOpen: false,
+		};
+	},
+	methods: {
+		toggleAccordion() {
+			this.isOpen = !this.isOpen;
+		},
+	},
+};
 </script>
 
 <style scoped>
 .mainContainer {
 	margin-top: 71px;
 	margin-right: 0;
-	height: 100vh;
 	font-family: 'Gilroy', sans-serif;
 	max-width: 1000px;
+	margin-bottom: 70px;
 }
 
 aside {
 	position: fixed;
 	max-width: 500px;
-	right: 0;
+	top: 30%;
+	right: 50px;
 	padding-right: 100px;
 }
 
 aside div:first-child {
 	display: flex;
+	align-items: center;
 }
 
 aside div:first-child h1 {
 	font-weight: 800;
 	font-size: 63px;
 	margin: 10px 0;
+	padding-left: 20px;
 }
 
 aside h2 {
@@ -90,10 +192,26 @@ aside h2 {
 }
 
 aside div:nth-child(5) {
+	margin: 13px 0;
 	display: flex;
 }
 
-aside div:nth-child(6) {
+.ratingContainer {
+	display: flex;
+	align-items: center;
+}
+
+.overallRating {
+	padding-left: 5px;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.numRating {
+	font-size: 13px;
+	font-weight: 700;
+	color: #b4b4b4;
+	padding-left: 10px;
 }
 
 #btnMessage {
@@ -128,5 +246,77 @@ aside div:nth-child(6) {
 	width: 17px;
 	height: 17px;
 	margin: 0 -2px;
+}
+
+.mainContentContainer {
+	margin-top: 170px;
+	padding-left: 100px;
+	max-width: 640px;
+}
+
+.category {
+	border-bottom: 5px solid;
+	line-height: 7px;
+	margin: 19px 0;
+	transition: all 0.06s ease-in;
+	width: 110px;
+}
+
+.category a {
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+}
+
+.category:hover {
+	border-width: 0;
+	transform: scale(1.2);
+	transform-origin: left -20%;
+}
+
+#category1 {
+	grid-column: 2/3;
+	border-color: #ffba7a;
+}
+
+.descriptionContainer {
+	margin-top: 60px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+.descriptionContainer p {
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.up {
+	transform: rotate(180deg);
+}
+
+.down {
+	transform: rotate(0deg);
+}
+
+.filterHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+}
+
+h5 {
+	margin: 0;
+}
+
+.filterHeader img {
+	height: 27px;
+}
+
+.ratingContainer1 {
+	display: flex;
 }
 </style>

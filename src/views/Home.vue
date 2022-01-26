@@ -212,8 +212,13 @@ export default {
 
 .ou {
 	font-family: 'Gilroy', sans-serif;
+	margin-top: 20px;
 	font-weight: 900;
 	font-size: 30px;
+}
+
+.header2 h1 {
+	margin-top: 10px;
 }
 
 .container3 {
