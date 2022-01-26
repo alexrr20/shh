@@ -158,6 +158,7 @@ export default {
 			this.showLogin = 'inline';
 			this.showLogout = 'none';
 			this.showEdit = 'none';
+			this.showAdmin = 'none';
 		},
 		...mapMutations(['SET_LOGGED_USER', 'SET_LOGOUT']),
 
