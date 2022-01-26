@@ -45,7 +45,7 @@ import { mapGetters, mapMutations } from 'vuex';
         },
         methods: {
             removeUser() {
-                this.SET_REMOVE_USER(this.getUsers.user.email)
+                // this.SET_REMOVE_USER(this.getUsers.user.email)
             },
             ...mapMutations(['SET_REMOVE_USER'])
         },
