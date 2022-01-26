@@ -7,6 +7,7 @@ import Signup from '../views/Signup.vue';
 import OfferHelp from '../views/OfferHelp.vue';
 import EditProfile from '../views/EditProfile.vue';
 import Post from '../views/Post.vue';
+import Admin from '../views/Admin.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -46,6 +47,11 @@ const routes = [
 		path: '/editprofile',
 		name: 'EditProfile',
 		component: EditProfile,
+	},
+	{
+		path: '/admin',
+		name: 'Admin',
+		component: Admin,
 	},
 ];
 

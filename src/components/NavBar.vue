@@ -68,6 +68,12 @@
 				v-bind:style="{ display: showLogout }"
 				>Logout</router-link
 			>
+			<router-link
+				class="link"
+				to="/admin"
+				v-bind:style="{ display: showAdmin }"
+				>Admin</router-link
+			>
 		</div>
 		<div class="dialog">
 			<dialog :open="isDialogOpen">
@@ -125,6 +131,7 @@ export default {
 			showEdit: 'none',
 			showLogin: 'inline',
 			showLogout: 'none',
+			showAdmin: 'none',
 		};
 	},
 	methods: {
@@ -137,6 +144,9 @@ export default {
 				this.showLogin = 'none';
 				this.showLogout = 'inline';
 				this.showEdit = 'inline';
+				if(this.getLoggedUser.type == 'admin'){
+					this.showAdmin = 'inline';
+				}
 			} else {
 				alert('NENHUM UTILIZADOR ENCONTRADO');
 				this.showEdit = 'none';
@@ -148,6 +158,7 @@ export default {
 			this.showLogin = 'inline';
 			this.showLogout = 'none';
 			this.showEdit = 'none';
+			this.showAdmin = 'none';
 		},
 		...mapMutations(['SET_LOGGED_USER', 'SET_LOGOUT']),
 
@@ -168,7 +179,7 @@ export default {
 		},
 	},
 	computed: {
-		...mapGetters(['isUser']),
+		...mapGetters(['isUser','getLoggedUser', 'isAdmin']),
 		search: {
 			get() {
 				return this.$store.state.search;

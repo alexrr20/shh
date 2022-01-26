@@ -430,6 +430,7 @@ export default new Vuex.Store({
       state.users.some(
         (user) => user.email === email && user.password === password
       ),
+    isAdmin: (state) => state.loggedUser((user) => user.type === 'admin'),  
     isUserAvailable: (state) => (email) =>
       state.users.every((user) => user.email !== email),
     getLoggedUser: (state) => state.loggedUser,
@@ -437,11 +438,20 @@ export default new Vuex.Store({
       state.posts.filter((post) => post.categoryID == category),
     getCategoryByID: (state) => (id) =>
       state.arrayCategories.filter((category) => category.id == id),
+    getUsers: (state) => state.users,
   },
   mutations: {
+    SET_NEW_USER(state, payload) {
+      state.users.push(payload);
+      localStorage.users = JSON.stringify(state.users);
+    },
     SET_LOGGED_USER(state, payload) {
       state.loggedUser = state.users.find((user) => user.email === payload);
       localStorage.loggedUser = JSON.stringify(state.loggedUser);
+    },
+    SET_REMOVE_USER(state, payload) {
+      state.users = state.users.filter((user) => user.email != payload);
+      localStorage.users = JSON.stringify(state.users);
     },
     SET_LOGOUT(state) {
       state.loggedUser = null;

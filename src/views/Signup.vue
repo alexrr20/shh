@@ -7,7 +7,7 @@
 					<div class="inputContainer">
 						<label for="firstName">Primeiro Nome</label>
 						<br />
-						<input type="text" id="firstName" v-model="form.name" />
+						<input type="text" id="firstName" v-model="form.userName" />
 					</div>
 					<div class="inputContainer">
 						<label for="lastName">Apelido</label>
@@ -78,14 +78,14 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
 	name: 'Signup',
 	components: {},
 	data() {
 		return {
 			form: {
-				name: '',
+				userName: '',
 				surname: '',
 				number: '',
 				dob: '',
@@ -93,6 +93,7 @@ export default {
 				nif: '',
 				password: '',
 				confirmPassword: '',
+				type:'user',
 			},
 			users: [],
 		};
@@ -128,22 +129,12 @@ export default {
 				this.isUserAvailable(this.form.email) &&
 				this.form.password == this.form.confirmPassword
 			) {
-				const newUser = {
-					userID: 444,
-					userName: this.form.name,
-					surname: this.form.surname,
-					email: this.form.email,
-					password: this.form.password,
-					type: 'user',
-					dob: this.form.dob,
-					nif: this.form.nif,
-					helper: true,
-				};
-				this.users.push(newUser);
+				this.SET_NEW_USER(this.form);
 			} else {
 				alert('NOP');
 			}
 		},
+		...mapMutations(['SET_NEW_USER']),
 	},
 };
 </script>
