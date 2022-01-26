@@ -122,7 +122,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 .mainContainer {
 	font-family: 'Gilroy', sans-serif;
 	display: flex;
@@ -159,14 +158,5 @@ h1 {
 	font-weight: 600;
 	outline: none;
 	padding-left: 20px;
-=======
-nav,
-footer {
-  display: none !important;
-}
-.mainContainer {
-  font-family: "Gilroy", sans-serif;
-  width: 180px;
->>>>>>> 5eb89a6b0eb173eefb2b2ca3cf5c0ff27bcd436f
 }
 </style>
