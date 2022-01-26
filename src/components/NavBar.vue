@@ -40,23 +40,33 @@
 			</div>
 		</div>
 		<div id="thirdDiv">
-			<router-link class="link" to="#">Oferecer Ajuda</router-link>
-			<router-link class="link" to="explore">Explorar</router-link>
+			<router-link class="link" to="/offerhelp"
+				>Oferecer Ajuda</router-link
+			>
+			<router-link class="link" to="/explore">Explorar</router-link>
 			<router-link class="link" to="#">Mensagens</router-link>
 		</div>
 		<div id="fourthDiv">
 			<router-link
 				class="link"
 				to="EditProfile"
-				v-bind:style="{ visibility: showEdit }"
+				v-bind:style="{ display: showEdit }"
 				>Editar Perfil</router-link
 			>
 			<router-link class="link" to="signup">Sign Up</router-link>
-			<router-link class="link" v-on:click.native="showDialog" to="" v-bind:style="{visibility: showLogin}"
+			<router-link
+				class="link"
+				v-on:click.native="showDialog"
+				to=""
+				v-bind:style="{ display: showLogin }"
 				>Login</router-link
 			>
-      <router-link class="link" v-on:click.native="logout" to="" v-bind:style="{visibility: showLogout}"
-			>Logout</router-link
+			<router-link
+				class="link"
+				v-on:click.native="logout"
+				to=""
+				v-bind:style="{ display: showLogout }"
+				>Logout</router-link
 			>
 		</div>
 		<div class="dialog">
@@ -112,9 +122,9 @@ export default {
 			email: '',
 			password: '',
 			isDialogOpen: false,
-			showEdit: 'hidden',
-      		showLogin: 'visible',
-      		showLogout: 'hidden'
+			showEdit: 'none',
+			showLogin: 'inline',
+			showLogout: 'none',
 		};
 	},
 	methods: {
@@ -124,22 +134,22 @@ export default {
 		login() {
 			if (this.isUser(this.email, this.password)) {
 				this.SET_LOGGED_USER(this.email);
-				this.showLogin = 'hidden';
-				this.showLogout = 'visible';
-				this.showEdit = 'visible';
+				this.showLogin = 'none';
+				this.showLogout = 'inline';
+				this.showEdit = 'inline';
 			} else {
 				alert('NENHUM UTILIZADOR ENCONTRADO');
-        		this.showEdit = 'hidden';
+				this.showEdit = 'none';
 			}
 			this.isDialogOpen = false;
 		},
-    logout(){
-      this.SET_LOGOUT(this.email);
-      this.showLogin = 'visible';
-      this.showLogout = 'hidden';
-	  this.showEdit = 'hidden';
-    },
-		...mapMutations(['SET_LOGGED_USER','SET_LOGOUT']),
+		logout() {
+			this.SET_LOGOUT(this.email);
+			this.showLogin = 'inline';
+			this.showLogout = 'none';
+			this.showEdit = 'none';
+		},
+		...mapMutations(['SET_LOGGED_USER', 'SET_LOGOUT']),
 
 		addTag(e) {
 			this.tagSearch = e.target.innerHTML;

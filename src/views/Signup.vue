@@ -3,49 +3,61 @@
 		<div class="container">
 			<div class="headerContainer"><h1>Signup</h1></div>
 			<div class="formContainer">
-				<form @submit.prevent="">
+				<form @submit.prevent="addUser()">
 					<div class="inputContainer">
 						<label for="firstName">Primeiro Nome</label>
 						<br />
-						<input type="text" id="firstName" />
+						<input type="text" id="firstName" v-model="form.name" />
 					</div>
 					<div class="inputContainer">
 						<label for="lastName">Apelido</label>
 						<br />
-						<input type="text" id="lastName" />
+						<input
+							type="text"
+							id="lastName"
+							v-model="form.surname"
+						/>
 					</div>
 					<div class="inputContainer">
 						<label for="number">Número de aluno</label>
 						<br />
-						<input type="text" id="number" />
+						<input type="text" id="number" v-model="form.number" />
 					</div>
 					<div class="inputContainer">
 						<label for="nif">NIF</label>
 						<br />
-						<input type="text" id="nif" />
+						<input type="text" id="nif" v-model="form.nif" />
 					</div>
 					<div class="inputContainer">
 						<label for="birthDate">Data de Nascimento</label>
 						<br />
-						<input type="date" id="birthDate" />
+						<input type="date" id="birthDate" v-model="form.dob" />
 					</div>
 					<div class="divider"></div>
 					<div class="inputContainer">
 						<label for="email">E-mail</label>
 						<br />
-						<input type="email" id="email" />
+						<input type="email" id="email" v-model="form.email" />
 					</div>
 					<div class="inputContainer">
 						<label for="password">Palavra-passe</label>
 						<br />
-						<input type="password" id="password" />
+						<input
+							type="password"
+							id="password"
+							v-model="form.password"
+						/>
 					</div>
 					<div class="inputContainer">
 						<label for="confirmPassword"
 							>Confirmar Palavra-passe</label
 						>
 						<br />
-						<input type="password" id="confirmPassword" />
+						<input
+							type="password"
+							id="confirmPassword"
+							v-model="form.confirmPassword"
+						/>
 						<span class="pwLength">
 							A tua palavra-passe deve conter entre 8 e 16
 							caracteres.
@@ -66,73 +78,73 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 export default {
-  name: "Signup",
-  components: {},
-  data() {
-    return {
-      form: {
-        name: "",
-        surname: "",
-        number: "",
-        dob: "",
-        email: "",
-        nif: "",
-        password: "",
-        confirmPassword: "",
-      },
-      users: [],
-    };
-  },
-  created() {
-    this.users = localStorage.users
-      ? JSON.parse(localStorage.users)
-      : [
-          {
-            userID: 444,
-            userName: "Pedro",
-            surname: "Gomes",
-            email: "admin@admin.com",
-            password: "admin",
-            type: "admin",
-            dob: "",
-            nif: "",
-            helper: true,
-          },
-        ];
-  },
-  watch: {
-    users() {
-      localStorage.setItem("users", JSON.stringify(this.users));
-    },
-  },
-  computed: {
-    ...mapGetters(["isUserAvailable"]),
-  },
-  methods: {
-    addUser() {
-      if (
-        this.isUserAvailable(this.form.email) &&
-        this.form.password == this.form.confirmPassword
-      ) {
-        const newUser = {
-          userID: 444,
-          userName: this.form.name,
-          surname: this.form.surname,
-          email: this.form.email,
-          password: this.form.password,
-          type: "user",
-          dob: this.form.dob,
-          nif: this.form.nif,
-          helper: true,
-        };
-        this.users.push(newUser);
-      } else {
-        alert("NOP");
-      }
-    },
-  },
+	name: 'Signup',
+	components: {},
+	data() {
+		return {
+			form: {
+				name: '',
+				surname: '',
+				number: '',
+				dob: '',
+				email: '',
+				nif: '',
+				password: '',
+				confirmPassword: '',
+			},
+			users: [],
+		};
+	},
+	created() {
+		this.users = localStorage.users
+			? JSON.parse(localStorage.users)
+			: [
+					{
+						userID: 444,
+						userName: 'Pedro',
+						surname: 'Gomes',
+						email: 'admin@admin.com',
+						password: 'admin',
+						type: 'admin',
+						dob: '',
+						nif: '',
+						helper: true,
+					},
+			  ];
+	},
+	watch: {
+		users() {
+			localStorage.setItem('users', JSON.stringify(this.users));
+		},
+	},
+	computed: {
+		...mapGetters(['isUserAvailable']),
+	},
+	methods: {
+		addUser() {
+			if (
+				this.isUserAvailable(this.form.email) &&
+				this.form.password == this.form.confirmPassword
+			) {
+				const newUser = {
+					userID: 444,
+					userName: this.form.name,
+					surname: this.form.surname,
+					email: this.form.email,
+					password: this.form.password,
+					type: 'user',
+					dob: this.form.dob,
+					nif: this.form.nif,
+					helper: true,
+				};
+				this.users.push(newUser);
+			} else {
+				alert('NOP');
+			}
+		},
+	},
 };
 </script>
 
@@ -147,19 +159,19 @@ export default {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  width: 90%;
+	display: flex;
+	justify-content: center;
+	width: 90%;
 }
 
 h1 {
-  font-weight: 900;
-  margin: 0;
-  font-size: 70px;
+	font-weight: 900;
+	margin: 0;
+	font-size: 70px;
 }
 
 .formContainer {
-  margin-left: 60px;
+	margin-left: 60px;
 }
 
 .formContainer input {
