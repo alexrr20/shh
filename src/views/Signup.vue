@@ -65,7 +65,7 @@
 					</div>
 					<div class="divider divider2"></div>
 					<div class="submitContainer">
-						<router-link to="#">Criar Conta</router-link>
+						<router-link v-on:click.native="addUser" to="#" >Criar Conta</router-link>
 						<p>
 							Ao criares conta estás a concordar com os termos de
 							utilização e de privacidade
