@@ -5,7 +5,7 @@ import Explore from "../views/Explore.vue";
 import ExploreCategory from "../views/ExploreCategory.vue";
 import Signup from "../views/Signup.vue";
 import OfferHelp from "../views/OfferHelp.vue";
-
+import EditProfile from "../views/EditProfile.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -35,6 +35,11 @@ const routes = [
     path: "/offerhelp",
     name: "OfferHelp",
     component: OfferHelp,
+  },
+  {
+    path: "/editprofile",
+    name: "EditProfile",
+    component: EditProfile,
   },
 ];
 

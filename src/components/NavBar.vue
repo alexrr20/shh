@@ -41,6 +41,7 @@
       <router-link class="link" to="#">Mensagens</router-link>
     </div>
     <div id="fourthDiv">
+      <router-link class="link" to="EditProfile" v-bind:style="{visibility:showEdit}">Editar Perfil</router-link>
       <router-link class="link" to="signup">Sign Up</router-link>
       <router-link class="link" v-on:click.native="showDialog" to="">Login</router-link>
     </div>
@@ -72,6 +73,7 @@ export default {
       email:"",
       password:"",
       isDialogOpen:false,
+      showEdit: "hidden",
     };
   },
   methods: {
