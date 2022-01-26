@@ -366,7 +366,7 @@ export default new Vuex.Store({
             userID: 444,
             userName: "Pedro",
             surname: "Gomes",
-            email: "admin",
+            email: "admin@admin.com",
             password: "admin",
             type: "admin",
             dob: "",
