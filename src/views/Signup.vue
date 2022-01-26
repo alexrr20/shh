@@ -51,13 +51,78 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
 	name: 'Signup',
 	components: {},
+	data() {
+		return {
+			form: {
+				name: '',
+				surname: '',
+				number: '',
+				dob: '',
+				email: '',
+				nif: '',
+				password: '',
+				confirmPassword: '',
+			},
+			users: [],
+		};
+	},
+	created() {
+		this.users = localStorage.users
+			? JSON.parse(localStorage.users)
+			: [
+					{
+						userID: 444,
+						userName: 'Pedro',
+						surname: 'Gomes',
+						email: 'admin',
+						password: 'admin',
+						type: 'admin',
+						dob: '',
+						nif: '',
+						helper: true,
+					},
+			  ];
+	},
+	watch: {
+		users() {
+			localStorage.setItem('users', JSON.stringify(this.users));
+		},
+	},
+	computed: {
+		...mapGetters(['isUserAvailable']),
+	},
+	methods: {
+		addUser() {
+			if (
+				this.isUserAvailable(this.form.email) &&
+				this.form.password == this.form.confirmPassword
+			) {
+				const newUser = {
+					userID: 444,
+					userName: this.form.name,
+					surname: this.form.surname,
+					email: this.form.email,
+					password: this.form.password,
+					type: 'user',
+					dob: this.form.dob,
+					nif: this.form.nif,
+					helper: true,
+				};
+				this.users.push(newUser);
+			} else {
+				alert('NOP');
+			}
+		},
+	},
 };
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .mainContainer {
 	font-family: 'Gilroy', sans-serif;
 	display: flex;
@@ -94,5 +159,14 @@ h1 {
 	font-weight: 600;
 	outline: none;
 	padding-left: 20px;
+=======
+nav,
+footer {
+  display: none !important;
+}
+.mainContainer {
+  font-family: "Gilroy", sans-serif;
+  width: 180px;
+>>>>>>> 5eb89a6b0eb173eefb2b2ca3cf5c0ff27bcd436f
 }
 </style>

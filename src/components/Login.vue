@@ -1,21 +1,46 @@
 <template>
-	<modal>
-		<!-- some generic modal component, wrapping a CSS modal -->
-		<h1>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-			accusamus veritatis sapiente est error obcaecati aliquam corporis
-			alias quia mollitia nostrum eligendi ratione rerum, harum at et
-			incidunt distinctio debitis!
-		</h1>
-		<h1>
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-			Distinctio, corporis? Molestiae doloremque maiores quaerat
-			cupiditate voluptates velit nesciunt quos fuga ratione harum quod,
-			iste perspiciatis quia accusamus libero incidunt dolorem?
-		</h1>
-	</modal>
+  <div>
+    <!-- <dialog :open="isDialogOpen"> -->
+        <form @submit.prevent="login">
+          <label for="email">Email:</label>
+          <input type="email" id="email" v-model="email">
+          <label for="password">Palavra-passe:</label>
+          <input type="password" id="password" v-model="password">
+          <input type="checkbox" id="session" name="session">
+          <label for="session">Manter sessão iniciada</label>
+          <input type="submit" value="Entrar">
+        </form>
+    <!-- </dialog> -->
+  </div>
 </template>
 
 <script>
-export default {};
+import { mapGetters, mapMutations } from "vuex";
+export default {
+    name:'Login',
+    data() {
+      return {
+        email:"",
+        password:"",
+        isDialogOpen:false,
+      };
+    },
+    computed: {
+      ...mapGetters(["isUser"])
+    },
+    methods: {
+      showDialog(){
+        this.isDialogOpen = true;
+      },
+      login() {
+        if(this.isUser(this.email, this.password)){
+          this.SET_LOGGED_USER(this.email)
+        }else{
+          alert("NENHUM UTILIZADOR ENCONTRADO")
+        }
+        this.isDialogOpen = false;
+      },
+      ...mapMutations(["SET_LOGGED_USER"]),
+    },
+};
 </script>
