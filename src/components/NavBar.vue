@@ -41,17 +41,39 @@
 		</div>
 		<div id="thirdDiv">
 			<router-link class="link" to="#">Oferecer Ajuda</router-link>
-			<router-link class="link" to="/explore">Explorar</router-link>
+			<router-link class="link" to="explore">Explorar</router-link>
 			<router-link class="link" to="#">Mensagens</router-link>
 		</div>
 		<div id="fourthDiv">
-			<router-link class="link" to="/signup">Sign Up</router-link>
-			<router-link class="link" to="/login">Login</router-link>
+			<router-link
+				class="link"
+				to="EditProfile"
+				v-bind:style="{ display: showEdit }"
+				>Editar Perfil</router-link
+			>
+			<router-link class="link" to="signup">Sign Up</router-link>
+			<router-link class="link" v-on:click.native="showDialog" to=""
+				>Login</router-link
+			>
+		</div>
+		<div class="dialog">
+			<dialog :open="isDialogOpen">
+				<form @submit.prevent="login">
+					<label for="email">Email:</label>
+					<input type="email" id="email" v-model="email" />
+					<label for="password">Palavra-passe:</label>
+					<input type="password" id="password" v-model="password" />
+					<input type="checkbox" id="session" name="session" />
+					<label for="session">Manter sessão iniciada</label>
+					<input type="submit" value="Entrar" />
+				</form>
+			</dialog>
 		</div>
 	</nav>
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 export default {
 	name: 'NavBar',
 	data() {
@@ -59,9 +81,26 @@ export default {
 			tagSearch: '',
 			navSize: 'short',
 			categoriesToggle: 'hidden',
+			email: '',
+			password: '',
+			isDialogOpen: false,
+			showEdit: 'none',
 		};
 	},
 	methods: {
+		showDialog() {
+			this.isDialogOpen = true;
+		},
+		login() {
+			if (this.isUser(this.email, this.password)) {
+				this.SET_LOGGED_USER(this.email);
+			} else {
+				alert('NENHUM UTILIZADOR ENCONTRADO');
+			}
+			this.isDialogOpen = false;
+		},
+		...mapMutations(['SET_LOGGED_USER']),
+
 		addTag(e) {
 			this.tagSearch = e.target.innerHTML;
 		},
@@ -79,6 +118,7 @@ export default {
 		},
 	},
 	computed: {
+		...mapGetters(['isUser']),
 		search: {
 			get() {
 				return this.$store.state.search;
