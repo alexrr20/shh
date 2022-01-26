@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <dialog :open="isDialogOpen"> -->
+    <dialog :open="isDialogOpen">
         <form @submit.prevent="login">
           <label for="email">Email:</label>
           <input type="email" id="email" v-model="email">
@@ -10,7 +10,7 @@
           <label for="session">Manter sessão iniciada</label>
           <input type="submit" value="Entrar">
         </form>
-    <!-- </dialog> -->
+    </dialog>
   </div>
 </template>
 
