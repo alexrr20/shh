@@ -48,7 +48,7 @@
 			<router-link
 				class="link"
 				to="EditProfile"
-				v-bind:style="{ display: showEdit }"
+				v-bind:style="{ visibility: showEdit }"
 				>Editar Perfil</router-link
 			>
 			<router-link class="link" to="signup">Sign Up</router-link>
@@ -88,8 +88,8 @@ export default {
 			password: '',
 			isDialogOpen: false,
 			showEdit: 'none',
-      showLogin: 'visible',
-      showLogout: 'hidden'
+      		showLogin: 'visible',
+      		showLogout: 'hidden'
 		};
 	},
 	methods: {
@@ -99,12 +99,12 @@ export default {
 		login() {
 			if (this.isUser(this.email, this.password)) {
 				this.SET_LOGGED_USER(this.email);
-        this.showLogin = 'hidden';
-        this.showLogout = 'visible';
-        //this.showEdit = 'visible';
+				this.showLogin = 'hidden';
+				this.showLogout = 'visible';
+				this.showEdit = 'visible';
 			} else {
 				alert('NENHUM UTILIZADOR ENCONTRADO');
-        this.showEdit = 'hidden';
+        		this.showEdit = 'hidden';
 			}
 			this.isDialogOpen = false;
 		},
