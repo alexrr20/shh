@@ -61,15 +61,40 @@
 		</div>
 		<div class="dialog">
 			<dialog :open="isDialogOpen">
-				<form @submit.prevent="login">
-					<label for="email">Email:</label>
-					<input type="email" id="email" v-model="email" />
-					<label for="password">Palavra-passe:</label>
-					<input type="password" id="password" v-model="password" />
-					<input type="checkbox" id="session" name="session" />
-					<label for="session">Manter sessão iniciada</label>
-					<input type="submit" value="Entrar" />
-				</form>
+				<div class="container">
+					<h1>Login</h1>
+					<form @submit.prevent="login">
+						<div class="inputContainerLogin">
+							<label for="email">Email</label>
+							<input type="email" id="email" v-model="email" />
+						</div>
+						<div class="inputContainerLogin">
+							<label for="password">Palavra-passe</label>
+							<input
+								type="password"
+								id="password"
+								v-model="password"
+							/>
+						</div>
+						<div class="radioContainer">
+							<input
+								type="checkbox"
+								id="session"
+								name="session"
+							/>
+							<label for="session">Manter sessão iniciada</label>
+						</div>
+
+						<input type="submit" value="Entrar" id="btnLogin" />
+					</form>
+					<div class="divider"></div>
+					<router-link to="#"
+						><h2>Ainda não tens conta?</h2>
+						<h3>
+							Prometemos que não te vamos julgar por isso :)
+						</h3></router-link
+					>
+				</div>
 			</dialog>
 		</div>
 	</nav>
@@ -175,6 +200,7 @@ nav {
 
 #secondDiv {
 	grid-column: 2 / 3;
+	height: 71px;
 }
 
 #thirdDiv {
@@ -183,12 +209,14 @@ nav {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 2fr 1fr 2fr 1fr 2fr 2fr;
+	height: 71px;
 }
 
 #fourthDiv {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr 40px;
+	height: 71px;
 }
 
 #fourthDiv a {
@@ -345,5 +373,117 @@ nav {
 
 .hidden {
 	display: none !important;
+}
+
+dialog {
+	position: absolute;
+	top: 170px;
+	height: 450px;
+	width: 315px;
+	border: 0;
+}
+
+dialog .container {
+	padding: 20px 30px 20px 30px;
+	position: relative;
+}
+
+dialog h1 {
+	font-size: 61px;
+	font-weight: 900;
+	margin: 0;
+}
+
+dialog .container form {
+	display: flex;
+	flex-direction: column;
+}
+
+.inputContainerLogin {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+}
+
+#password {
+	margin-bottom: 20px;
+}
+
+.inputContainerLogin label {
+	font-weight: 700;
+	font-size: 11px;
+}
+
+.inputContainerLogin input {
+	height: 45px;
+	background-color: black;
+	border: 0;
+	color: white;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 600;
+	outline: none;
+	padding-left: 20px;
+}
+
+#btnLogin {
+	width: 100%;
+	background-color: white;
+	height: 45px;
+	border: 0;
+	outline: 3px solid black;
+	outline-offset: -2px;
+	color: black;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 800;
+	box-sizing: border-box;
+	padding-top: 3px;
+	margin-bottom: 1px;
+	cursor: pointer;
+	transition: all 0.08s ease-in-out;
+	font-size: 20px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.radioContainer {
+	font-size: 9px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+}
+
+.radioContainer input {
+	margin-left: 0;
+}
+
+.container a {
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.container a h2 {
+	margin: 0;
+	font-size: 15px;
+	color: black;
+}
+
+.container a h3 {
+	margin: 0;
+	font-size: 7px;
+	color: #bababa;
+}
+
+.divider {
+	width: 347px;
+	background-color: #bababa;
+	height: 1px;
+	position: absolute;
+	left: -16px;
+	bottom: 80px;
 }
 </style>
