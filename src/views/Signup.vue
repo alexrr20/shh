@@ -7,7 +7,7 @@
 					<div class="inputContainer">
 						<label for="firstName">Primeiro Nome</label>
 						<br />
-						<input type="text" id="firstName" v-model="form.name" />
+						<input type="text" id="firstName" v-model="form.userName" />
 					</div>
 					<div class="inputContainer">
 						<label for="lastName">Apelido</label>

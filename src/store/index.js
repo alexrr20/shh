@@ -449,6 +449,10 @@ export default new Vuex.Store({
       state.loggedUser = state.users.find((user) => user.email === payload);
       localStorage.loggedUser = JSON.stringify(state.loggedUser);
     },
+    SET_REMOVE_USER(state, payload) {
+      state.users = state.users.filter((user) => user.email == payload);
+      localStorage.users = JSON.stringify(state.users);
+    },
     SET_LOGOUT(state) {
       state.loggedUser = null;
       localStorage.removeItem("loggedUser");
