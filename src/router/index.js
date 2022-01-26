@@ -6,6 +6,7 @@ import ExploreCategory from '../views/ExploreCategory.vue';
 import Signup from '../views/Signup.vue';
 import OfferHelp from '../views/OfferHelp.vue';
 import EditProfile from '../views/EditProfile.vue';
+import Post from '../views/Post.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -29,7 +30,7 @@ const routes = [
 	{
 		path: '/post/:id',
 		name: 'Post',
-		component: 'Post',
+		component: Post,
 	},
 	{
 		path: '/signup',
