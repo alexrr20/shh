@@ -1,7 +1,11 @@
 <template>
 	<div class="mainContainer">
 		<div class="mainContentContainer">
-			<div class="category" id="category1">
+			<div
+				class="category"
+				id="category1"
+				v-bind:style="{ 'border-color': postInfo.category.color }"
+			>
 				<router-link
 					:to="{ name: 'exploreCategory', params: { id: 0 } }"
 					>{{ postInfo.category.name }}</router-link
@@ -88,9 +92,11 @@
 							:class="{ faded: postInfo.overallRating < 5 }"
 						/>
 					</div>
-					<span class="overallRating">{{
-						postInfo.overallRating
-					}}</span>
+					<span
+						class="overallRating"
+						v-bind:style="{ color: postInfo.category.color }"
+						>{{ postInfo.overallRating }}</span
+					>
 					<span class="numRating"
 						>{{ postInfo.reviews.length }} Avaliações</span
 					>
@@ -108,8 +114,10 @@
 				/>
 				<h1>{{ postInfo.userName }}</h1>
 			</div>
-			<h2>Tecnologias e Sistemas de Informação para Web</h2>
-			<h2>2º Ano</h2>
+			<h2 v-bind:style="{ color: postInfo.category.color }">
+				Tecnologias e Sistemas de Informação para Web
+			</h2>
+			<h2 v-bind:style="{ color: postInfo.category.color }">2º Ano</h2>
 			<div class="divider"></div>
 			<div class="ratingContainer">
 				<div class="starsContainer">
@@ -144,7 +152,11 @@
 						:class="{ faded: postInfo.overallRating < 5 }"
 					/>
 				</div>
-				<span class="overallRating">{{ postInfo.overallRating }}</span>
+				<span
+					class="overallRating"
+					v-bind:style="{ color: postInfo.category.color }"
+					>{{ postInfo.overallRating }}</span
+				>
 				<span class="numRating"
 					>{{ postInfo.reviews.length }} Avaliações</span
 				>
@@ -296,7 +308,6 @@ aside div:nth-child(5) {
 
 #category1 {
 	grid-column: 2/3;
-	border-color: #ffba7a;
 }
 
 .descriptionContainer {
