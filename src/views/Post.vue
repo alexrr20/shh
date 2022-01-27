@@ -4,7 +4,7 @@
 			<div class="category" id="category1">
 				<router-link
 					:to="{ name: 'exploreCategory', params: { id: 0 } }"
-					>Fotografia</router-link
+					>{{ postInfo.category.name }}</router-link
 				>
 			</div>
 			<img src="../../public/assets/placeholderPostPhoto.jpeg" alt="" />
@@ -61,30 +61,39 @@
 							src="../../public/assets/noun-star-1187057.svg"
 							alt=""
 							class="star 1"
+							:class="{ faded: postInfo.overallRating < 1 }"
 						/>
 						<img
 							src="../../public/assets/noun-star-1187057.svg"
 							alt=""
 							class="star 2"
+							:class="{ faded: postInfo.overallRating < 2 }"
 						/>
 						<img
 							src="../../public/assets/noun-star-1187057.svg"
 							alt=""
 							class="star 3"
+							:class="{ faded: postInfo.overallRating < 3 }"
 						/>
 						<img
 							src="../../public/assets/noun-star-1187057.svg"
 							alt=""
 							class="star 4"
+							:class="{ faded: postInfo.overallRating < 4 }"
 						/>
 						<img
 							src="../../public/assets/noun-star-1187057.svg"
 							alt=""
 							class="star 5"
+							:class="{ faded: postInfo.overallRating < 5 }"
 						/>
 					</div>
-					<span class="overallRating">4</span>
-					<span class="numRating">2 Avaliações</span>
+					<span class="overallRating">{{
+						postInfo.overallRating
+					}}</span>
+					<span class="numRating"
+						>{{ postInfo.reviews.length }} Avaliações</span
+					>
 				</div>
 			</div>
 		</div>
@@ -97,7 +106,7 @@
 					width="70"
 					height="70"
 				/>
-				<h1>Rodrigo</h1>
+				<h1>{{ postInfo.userName }}</h1>
 			</div>
 			<h2>Tecnologias e Sistemas de Informação para Web</h2>
 			<h2>2º Ano</h2>
@@ -108,34 +117,41 @@
 						src="../../public/assets/noun-star-1187057.svg"
 						alt=""
 						class="star 1"
+						:class="{ faded: postInfo.overallRating < 1 }"
 					/>
 					<img
 						src="../../public/assets/noun-star-1187057.svg"
 						alt=""
 						class="star 2"
+						:class="{ faded: postInfo.overallRating < 2 }"
 					/>
 					<img
 						src="../../public/assets/noun-star-1187057.svg"
 						alt=""
 						class="star 3"
+						:class="{ faded: postInfo.overallRating < 3 }"
 					/>
 					<img
 						src="../../public/assets/noun-star-1187057.svg"
 						alt=""
 						class="star 4"
+						:class="{ faded: postInfo.overallRating < 4 }"
 					/>
 					<img
 						src="../../public/assets/noun-star-1187057.svg"
 						alt=""
 						class="star 5"
+						:class="{ faded: postInfo.overallRating < 5 }"
 					/>
 				</div>
-				<span class="overallRating">4</span>
-				<span class="numRating">2 Avaliações</span>
+				<span class="overallRating">{{ postInfo.overallRating }}</span>
+				<span class="numRating"
+					>{{ postInfo.reviews.length }} Avaliações</span
+				>
 			</div>
 			<div>
 				<router-link to="#" id="btnMessage"
-					>Contactar Utilizador</router-link
+					>Contactar {{ postInfo.userName }}</router-link
 				>
 			</div>
 		</aside>
@@ -147,12 +163,16 @@ export default {
 	data() {
 		return {
 			isOpen: false,
+			postInfo: this.$store.state.posts[this.$route.params.id],
 		};
 	},
 	methods: {
 		toggleAccordion() {
 			this.isOpen = !this.isOpen;
 		},
+	},
+	created() {
+		console.log(this.postInfo);
 	},
 };
 </script>
@@ -318,5 +338,9 @@ h5 {
 
 .ratingContainer1 {
 	display: flex;
+}
+
+.faded {
+	opacity: 31%;
 }
 </style>

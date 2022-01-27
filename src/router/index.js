@@ -29,7 +29,7 @@ const routes = [
 		],
 	},
 	{
-		path: '/post',
+		path: '/post/:id',
 		name: 'Post',
 		component: Post,
 	},

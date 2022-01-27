@@ -46,13 +46,32 @@
 				<label for="radioModelo">MODELO</label>
 			</div>
 		</div>
-		<div></div>
+		<div class="descriptionContainer">
+			<h3>Escreve uma pequena descrição (máx. 100 carateres)</h3>
+			<textarea v-model="description" placeholder="Descrição"></textarea>
+		</div>
+		<div class="descriptionContainer">
+			<h3>E aqui uma descrição maior (máx. 2000 carateres)</h3>
+			<textarea v-model="description" placeholder="Descrição"></textarea>
+		</div>
+		<div class="descriptionContainer">
+			<h3>
+				Adiciona algumas perguntas frequentes (podes sempre adicionar
+				mais tarde)
+			</h3>
+			<textarea v-model="description" placeholder="Pergunta"></textarea>
+		</div>
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'OfferHelp',
+	data() {
+		return {
+			description: '',
+		};
+	},
 };
 </script>
 
@@ -63,6 +82,8 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: black;
+	color: white;
 }
 
 .headerContainer {
@@ -104,5 +125,16 @@ input[type='radio'] {
 
 input[type='radio']:checked + label {
 	transform: scale(1.2);
+}
+
+.descriptionContainer {
+	margin-top: 70px;
+	width: 80%;
+}
+
+.descriptionContainer textarea {
+	margin-top: 10px;
+	width: 100%;
+	height: 300px;
 }
 </style>
