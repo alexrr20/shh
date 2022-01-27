@@ -8,6 +8,7 @@ import OfferHelp from '../views/OfferHelp.vue';
 import EditProfile from '../views/EditProfile.vue';
 import Post from '../views/Post.vue';
 import Admin from '../views/Admin.vue';
+import NewMessage from '../views/NewMessage.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -52,6 +53,11 @@ const routes = [
 		path: '/admin',
 		name: 'Admin',
 		component: Admin,
+	},
+	{
+		path: '/post/:id/newmessage',
+		name: 'NewMessage',
+		component: NewMessage,
 	},
 ];
 

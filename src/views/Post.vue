@@ -57,9 +57,9 @@
 				</div>
 			</div>
 			<div class="divider"></div>
-			<div class="ratingContainer">
+			<div class="ratingContainer1">
 				<h4>Avaliação</h4>
-				<div class="ratingContainer1">
+				<div class="ratingContainer2">
 					<div class="starsContainer">
 						<img
 							src="../../public/assets/noun-star-1187057.svg"
@@ -161,10 +161,24 @@
 					>{{ postInfo.reviews.length }} Avaliações</span
 				>
 			</div>
-			<div>
-				<router-link to="#" id="btnMessage"
+			<div class="btnClockContainer">
+				<router-link
+					:to="{
+						name: 'NewMessage',
+						params: { id: postInfo.postID },
+					}"
+					id="btnMessage"
 					>Contactar {{ postInfo.userName }}</router-link
 				>
+				<img
+					src="../../public/assets/noun-clock-1495285.svg"
+					alt=""
+					id="clock"
+				/>
+				<div>
+					<span>Tempo de Resposta: No mesmo dia</span>
+					<span>Tempo de Entrega: 2 a 3 dias</span>
+				</div>
 			</div>
 		</aside>
 	</div>
@@ -200,10 +214,11 @@ export default {
 
 aside {
 	position: fixed;
-	max-width: 500px;
+	max-width: 550px;
 	top: 30%;
 	right: 50px;
-	padding-right: 100px;
+	padding-right: 30px;
+	width: 38%;
 }
 
 aside div:first-child {
@@ -349,9 +364,30 @@ h5 {
 
 .ratingContainer1 {
 	display: flex;
+	flex-direction: column;
+}
+
+.ratingContainer2 {
+	display: flex;
 }
 
 .faded {
 	opacity: 31%;
+}
+
+.btnClockContainer {
+	display: flex;
+}
+
+#clock {
+	width: 40px;
+	padding-left: 20px;
+}
+
+.btnClockContainer div {
+	display: flex;
+	flex-direction: column;
+	font-weight: 700;
+	font-size: 13px;
 }
 </style>
