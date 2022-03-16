@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="topContainer">
 				<img
-					src="../../public/assets/profile.jpg"
+					src="../../public/assets/user.png"
 					id="profile"
 					alt=""
 					width="100"
