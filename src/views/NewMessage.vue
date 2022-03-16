@@ -20,6 +20,7 @@
 				<router-link to="#" id="btnMessage"
 					>Enviar Mensagem</router-link
 				>
+				
 			</div>
 		</div>
 	</div>
