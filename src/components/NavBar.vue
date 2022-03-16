@@ -44,7 +44,7 @@
 				>Oferecer Ajuda</router-link
 			>
 			<router-link class="link" to="/explore">Explorar</router-link>
-			<router-link class="link" to="#">Mensagens</router-link>
+			<router-link class="link" to="/messages">Mensagens</router-link>
 		</div>
 		<div id="fourthDiv">
 			<router-link

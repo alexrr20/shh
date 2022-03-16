@@ -9,6 +9,7 @@ import EditProfile from '../views/EditProfile.vue';
 import Post from '../views/Post.vue';
 import Admin from '../views/Admin.vue';
 import NewMessage from '../views/NewMessage.vue';
+import Messages from '../views/Messages.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -59,6 +60,11 @@ const routes = [
 		name: 'NewMessage',
 		component: NewMessage,
 	},
+	{
+		path: '/messages',
+		name: 'Messages',
+		component: Messages,
+	}
 ];
 
 const router = new VueRouter({
