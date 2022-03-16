@@ -123,8 +123,29 @@ input[type='radio'] {
 	display: none;
 }
 
-input[type='radio']:checked + label {
+input[type='radio']:checked + label[for=radioFotografia] {
 	transform: scale(1.2);
+	color: #ffba7a;
+}
+
+input[type='radio']:checked + label[for=radioVideo] {
+	transform: scale(1.2);
+	color: #ff8ba0;
+}
+
+input[type='radio']:checked + label[for=radioDesenho] {
+	transform: scale(1.2);
+	color: #ff99f5;
+}
+
+input[type='radio']:checked + label[for=radioWebDesign] {
+	transform: scale(1.2);
+	color: #58d9f5;
+}
+
+input[type='radio']:checked + label[for=radioModelo] {
+	transform: scale(1.2);
+	color: #adff90;
 }
 
 .descriptionContainer {
