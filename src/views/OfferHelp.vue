@@ -88,6 +88,7 @@ export default {
 				description: '',
 				faq:'',
 				photos:'',
+				userName:this.$store.getters.getLoggedUser.userName,
 			},
 		};
 	},

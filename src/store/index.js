@@ -305,7 +305,7 @@ export default new Vuex.Store({
 						year: '2',
 					},
 					{
-						postID: 3,
+						postID: 8,
 						userID: 129,
 						userName: 'Miguel',
 						category: {
