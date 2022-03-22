@@ -459,6 +459,7 @@ export default new Vuex.Store({
 		getCategoryByID: (state) => (id) =>
 			state.arrayCategories.filter((category) => category.id == id),
 		getUsers: (state) => state.users,
+		getPosts: (state) => state.posts,
 	},
 	mutations: {
 		SET_NEW_USER(state, payload) {
@@ -478,6 +479,10 @@ export default new Vuex.Store({
 		SET_LOGOUT(state) {
 			state.loggedUser = null;
 			localStorage.removeItem('loggedUser');
+		},
+		SET_NEW_POST(state, payload) {	
+			state.posts.push(payload);
+			localStorage.posts = JSON.stringify(state.posts);
 		},
 		updateSearch(state, input) {
 			state.search = input;

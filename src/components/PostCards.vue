@@ -8,7 +8,7 @@
 			v-on:click="goToPost(post.postID)"
 		>
 			<div class="photoContainer">
-				<img src="https://www.fillmurray.com/640/360" alt="" />
+				<img :src="post.photos" alt="" />
 			</div>
 			<div class="infoContainer">
 				<div class="topContainer">
@@ -128,6 +128,7 @@ export default {
 .photoContainer img {
 	width: 160px;
 	height: 110px;
+	object-fit:cover;
 }
 
 .infoContainer {

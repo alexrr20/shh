@@ -14,6 +14,7 @@
 					id="radioFotografia"
 					name="category"
 					value="fotografia"
+					v-model="content.category"
 				/>
 				<label for="radioFotografia">FOTOGRAFIA</label>
 				<input
@@ -21,6 +22,7 @@
 					id="radioVideo"
 					name="category"
 					value="video"
+					v-model="content.category"
 				/>
 				<label for="radioVideo">VÍDEO</label>
 				<input
@@ -28,6 +30,7 @@
 					id="radioDesenho"
 					name="category"
 					value="desenho"
+					v-model="content.category"
 				/>
 				<label for="radioDesenho">DESENHO</label>
 				<input
@@ -35,6 +38,7 @@
 					id="radioWebDesign"
 					name="category"
 					value="webDesign"
+					v-model="content.category"
 				/>
 				<label for="radioWebDesign">WEB DESIGN</label>
 				<input
@@ -42,35 +46,64 @@
 					id="radioModelo"
 					name="category"
 					value="modelo"
+					v-model="content.category"
 				/>
 				<label for="radioModelo">MODELO</label>
 			</div>
 		</div>
 		<div class="descriptionContainer">
 			<h3>Escreve uma pequena descrição (máx. 100 carateres)</h3>
-			<textarea v-model="description" placeholder="Descrição"></textarea>
+			<textarea v-model="content.shortDescription" placeholder="Descrição"></textarea>
 		</div>
 		<div class="descriptionContainer">
 			<h3>E aqui uma descrição maior (máx. 2000 carateres)</h3>
-			<textarea v-model="description" placeholder="Descrição"></textarea>
+			<textarea v-model="content.description" placeholder="Descrição"></textarea>
 		</div>
 		<div class="descriptionContainer">
 			<h3>
 				Adiciona algumas perguntas frequentes (podes sempre adicionar
 				mais tarde)
 			</h3>
-			<textarea v-model="description" placeholder="Pergunta"></textarea>
+			<textarea v-model="content.faq" placeholder="Pergunta"></textarea>
+		</div>
+		<div class="descriptionContainer">
+			<h3>Adiciona o link de uma foto ilustrativa do teu projeto:</h3> 
+			<input type="text" placeholder="Link Fotografia" id="photoContainer" v-model="content.photos">
+		</div>
+		<div class="submitContainer">
+			<router-link v-on:click.native="addPost" to="#" >Criar Anúncio</router-link>
 		</div>
 	</div>
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 export default {
 	name: 'OfferHelp',
 	data() {
 		return {
-			description: '',
+			content:{
+				category:'',
+				shortDescription:'',
+				description: '',
+				faq:'',
+				photos:'',
+			},
 		};
+	},
+	computed: {
+		...mapGetters(['getLoggedUser']),
+	},
+	methods: {
+		addPost() {
+			if(this.getLoggedUser != null){
+				this.SET_NEW_POST(this.content)
+				//console.log(this.content)
+			}else{
+				alert('PRECISAS DE TE AUTENTICAR PARA CRIAR UM ANÚNCIO')
+			}
+		},
+		...mapMutations(['SET_NEW_POST']),
 	},
 };
 </script>
@@ -158,4 +191,55 @@ input[type='radio']:checked + label[for=radioModelo] {
 	width: 100%;
 	height: 300px;
 }
+
+.submitContainer {
+	width: 35%;
+	display: flex;
+	margin-right: 680px;
+	margin-top: 70px;
+}
+
+.submitContainer p {
+	font-size: 9px;
+	font-weight: 700;
+	width: 40%;
+	padding-left: 40px;
+}
+
+.submitContainer a {
+	width: 50%;
+	background-color:black;
+	height: 45px;
+	border: 0;
+	outline: 3px solid white;
+	outline-offset: -2px;
+	color: white;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 800;
+	box-sizing: border-box;
+	padding-top: 3px;
+	margin-bottom: 1px;
+	cursor: pointer;
+	transition: all 0.08s ease-in-out;
+	font-size: 20px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.descriptionContainer input {
+	box-sizing: border-box;
+	max-width: 500px;
+	width: 100%;
+	height: 45px;
+	background-color:white;
+	border: 0;
+	color: black;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 600;
+	outline: none;
+	padding-left: 20px;
+}
+
 </style>
