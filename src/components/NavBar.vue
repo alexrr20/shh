@@ -104,7 +104,7 @@
 						<input type="submit" value="Entrar" id="btnLogin" />
 					</form>
 					<div class="divider"></div>
-					<router-link to="#"
+					<router-link to="/signup"
 						><h2>Ainda não tens conta?</h2>
 						<h3>
 							Prometemos que não te vamos julgar por isso :)
