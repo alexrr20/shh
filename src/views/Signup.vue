@@ -24,6 +24,17 @@
 						<input type="text" id="number" v-model="form.number" />
 					</div>
 					<div class="inputContainer">
+						<label for="course">Curso que frequenta</label>
+						<br />
+						<select name="course" id="course" v-model="form.course">
+  							<option value="TSIW">TSIW</option>
+  							<option value="Design">Design</option>
+ 							<option value="Fotografia">Fotografia</option>
+  							<option value="Multimédia">Multimédia</option>
+							<option value="TCAV">TCAV</option>
+						</select>
+					</div>
+					<div class="inputContainer">
 						<label for="nif">NIF</label>
 						<br />
 						<input type="text" id="nif" v-model="form.nif" />
@@ -88,6 +99,7 @@ export default {
 				userName: '',
 				surname: '',
 				number: '',
+				course:'',
 				dob: '',
 				email: '',
 				nif: '',
@@ -166,6 +178,20 @@ h1 {
 }
 
 .formContainer input {
+	box-sizing: border-box;
+	max-width: 500px;
+	width: 100%;
+	height: 45px;
+	background-color: black;
+	border: 0;
+	color: white;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 600;
+	outline: none;
+	padding-left: 20px;
+}
+
+.formContainer select {
 	box-sizing: border-box;
 	max-width: 500px;
 	width: 100%;

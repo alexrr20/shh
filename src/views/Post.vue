@@ -11,7 +11,7 @@
 					>{{ postInfo.category.name }}</router-link
 				>
 			</div>
-			<img src="../../public/assets/placeholderPostPhoto.jpeg" alt="" />
+			<img id="photoContainer" :src="postInfo.photos" alt="" />
 			<div class="descriptionContainer">
 				<h4>Descrição</h4>
 				<p>
@@ -389,5 +389,12 @@ h5 {
 	flex-direction: column;
 	font-weight: 700;
 	font-size: 13px;
+}
+
+#photoContainer {
+	display: flex;
+	width: 700px;
+	height: 500px;
+	object-fit:cover;
 }
 </style>
