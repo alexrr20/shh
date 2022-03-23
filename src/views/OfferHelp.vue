@@ -83,7 +83,7 @@ export default {
 	data() {
 		return {
 			content:{
-				category:'',
+				//category:'',
 				shortDescription:'',
 				description: '',
 				faq:'',

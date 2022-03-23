@@ -14,12 +14,7 @@
 			<img id="photoContainer" :src="postInfo.photos" alt="" />
 			<div class="descriptionContainer">
 				<h4>Descrição</h4>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Eaque consectetur aut suscipit? Magni doloremque officiis
-					debitis dicta ad deserunt quam exercitationem culpa nobis.
-					In molestias soluta nobis maiores! Voluptatibus, nemo?
-				</p>
+				<p>{{ postInfo.description }}</p>
 			</div>
 			<div class="divider"></div>
 			<div class="faqContainer">
@@ -115,9 +110,9 @@
 				<h1>{{ postInfo.userName }}</h1>
 			</div>
 			<h2 v-bind:style="{ color: postInfo.category.color }">
-				Tecnologias e Sistemas de Informação para Web
+				{{ postInfo.course }}
 			</h2>
-			<h2 v-bind:style="{ color: postInfo.category.color }">2º Ano</h2>
+			<h2 v-bind:style="{ color: postInfo.category.color }">{{ postInfo.year }}</h2>
 			<div class="divider"></div>
 			<div class="ratingContainer">
 				<div class="starsContainer">

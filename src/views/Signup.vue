@@ -35,6 +35,15 @@
 						</select>
 					</div>
 					<div class="inputContainer">
+						<label for="course">Ano que frequenta</label>
+						<br />
+						<select name="year" id="year" v-model="form.year">
+  							<option value="1">1º</option>
+  							<option value="2">2º</option>
+ 							<option value="3">3º</option>
+						</select>
+					</div>
+					<div class="inputContainer">
 						<label for="nif">NIF</label>
 						<br />
 						<input type="text" id="nif" v-model="form.nif" />
@@ -100,6 +109,7 @@ export default {
 				surname: '',
 				number: '',
 				course:'',
+				year:'',
 				dob: '',
 				email: '',
 				nif: '',
@@ -121,7 +131,7 @@ export default {
 						email: 'admin@admin.com',
 						password: 'admin',
 						type: 'admin',
-						dob: '',
+						dob: '2001-03-17',
 						nif: '',
 						helper: true,
 					},
@@ -157,7 +167,8 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 110px;
+	margin-top: 170px;
+	margin-bottom: 100px;
 	height: 135vh;
 }
 
@@ -199,7 +210,7 @@ h1 {
 	background-color: black;
 	border: 0;
 	color: white;
-	font-family: 'gilroy', sans-serif;
+	font-family: 'Gilroy', sans-serif;
 	font-weight: 600;
 	outline: none;
 	padding-left: 20px;

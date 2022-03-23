@@ -38,6 +38,8 @@ footer {
   height: 120px;
   display: grid;
   grid-template-columns: minmax(80px, 8%) 300px auto 430px;
+  bottom: 0;
+  position: relative;
 }
 
 .container {

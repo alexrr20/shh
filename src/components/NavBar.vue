@@ -199,7 +199,7 @@ nav {
 	display: grid;
 	grid-template-rows: auto;
 	grid-template-columns: minmax(80px, 10%) 563px 10% 2fr 1fr;
-	position: fixed;
+	position:fixed;
 	top: 0;
 	width: 100%;
 	z-index: 10;
