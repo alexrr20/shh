@@ -30,6 +30,8 @@ export default {
     inset 0 0 0 2000px rgba(255, 186, 122, 0.92);
 }
 
+/* mudar barra de categorias e foto */
+
 .bannerContainer span {
   color: white;
   font-family: "Gilroy", sans-serif;

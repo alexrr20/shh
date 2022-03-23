@@ -127,7 +127,9 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 1000px;
+	/* height: 1000px; */
+	min-height: 100vh;
+	margin-bottom: 60px;
 }
 
 .contentContainer {

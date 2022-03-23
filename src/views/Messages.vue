@@ -26,6 +26,7 @@
 	flex-direction: column;
 	align-items: center;
     background-color: white;
+    min-height: 80vh;
 }
 
 .headerContainer {
