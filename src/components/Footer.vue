@@ -40,6 +40,7 @@ footer {
   grid-template-columns: minmax(80px, 8%) 300px auto 430px;
   bottom: 0;
   position: relative;
+  z-index: 2;
 }
 
 .container {

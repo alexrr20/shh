@@ -60,6 +60,11 @@
 						<input type="email" id="email" v-model="form.email" />
 					</div>
 					<div class="inputContainer">
+						<label for="photo">Foto de perfil</label>
+						<br />
+						<input type="text" id="photo" v-model="form.photo" />
+					</div>
+					<div class="inputContainer">
 						<label for="password">Palavra-passe</label>
 						<br />
 						<input
@@ -113,6 +118,7 @@ export default {
 				dob: '',
 				email: '',
 				nif: '',
+				photo:'',
 				password: '',
 				confirmPassword: '',
 				type:'user',
@@ -169,7 +175,7 @@ export default {
 	align-items: center;
 	margin-top: 170px;
 	margin-bottom: 100px;
-	height: 135vh;
+	height: 155vh;
 }
 
 .container {

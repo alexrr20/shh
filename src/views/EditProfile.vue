@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="topContainer">
 				<img
-					src="../../public/assets/user.png"
+					:src="getLoggedUser.photo"
 					id="profile"
 					alt=""
 					width="100"
@@ -90,6 +90,11 @@ export default {
 	align-items: center;
 	font-size: 44px;
 	font-weight: 800;
+	object-fit: cover;
+}
+
+img{
+	object-fit: cover;
 }
 
 .topContainer h1 {
