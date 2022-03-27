@@ -29,11 +29,11 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 19px;
   margin: 4px 2px;
-  border-radius: 45%;
+  border-radius: 50%;
   cursor: pointer;
-  width:60px;
+  width:72px;
   transition: 0.5s ease;
 }
 
@@ -48,7 +48,7 @@ button {
 
 .botao :hover {
     transform: scale(1.2, 1.2);
-    background-color:rgb(143, 216, 143);
+    /* background-color:rgb(143, 216, 143); */
 }
 
 </style>

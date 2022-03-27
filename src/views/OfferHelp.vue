@@ -88,7 +88,6 @@ export default {
 				description: '',
 				faq:'',
 				photos:'',
-				userName:this.$store.getters.getLoggedUser.userName,
 			},
 		};
 	},
@@ -98,6 +97,7 @@ export default {
 	methods: {
 		addPost() {
 			if(this.getLoggedUser != null){
+				this.content.userName = (this.getLoggedUser.userName);
 				this.SET_NEW_POST(this.content)
 				//console.log(this.content)
 			}else{
