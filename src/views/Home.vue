@@ -257,7 +257,7 @@ export default {
 
 .bannerContainer:first-child {
 	min-height: 100%;
-	background: url(../../public/assets/photoBG.jpg);
+	background: url(../../public/assets/photoBG.webp);
 	background-size: cover;
 	background-position: center;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px -250px 300px -90px inset,
@@ -266,7 +266,7 @@ export default {
 
 .bannerContainer:nth-child(2) {
 	min-height: 100%;
-	background: url(../../public/assets/videoBG.jpg);
+	background: url(../../public/assets/videoBG.webp);
 	background-size: cover;
 	background-position: center;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px -250px 300px -90px inset,
@@ -275,7 +275,7 @@ export default {
 
 .bannerContainer:nth-child(3) {
 	min-height: 100%;
-	background: url(../../public/assets/drawBG.jpg);
+	background: url(../../public/assets/drawBG.webp);
 	background-size: cover;
 	background-position: center;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px -250px 300px -90px inset,
@@ -284,7 +284,7 @@ export default {
 
 .bannerContainer:nth-child(4) {
 	min-height: 100%;
-	background: url(../../public/assets/codingBG.jpg);
+	background: url(../../public/assets/codingBG.webp);
 	background-size: cover;
 	background-position: center;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px -250px 300px -90px inset,
@@ -293,7 +293,7 @@ export default {
 
 .bannerContainer:nth-child(5) {
 	min-height: 100%;
-	background: url(../../public/assets/modelBG.jpg);
+	background: url(../../public/assets/modelBG.webp);
 	background-size: cover;
 	background-position: center;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px -250px 300px -90px inset,
