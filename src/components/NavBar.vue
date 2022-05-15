@@ -49,6 +49,12 @@
 		<div id="fourthDiv">
 			<router-link
 				class="link"
+				to="/admin"
+				v-bind:style="{ display: showAdmin }"
+				>Admin</router-link
+			>
+			<router-link
+				class="link"
 				to="EditProfile"
 				v-bind:style="{ display: showEdit }"
 				>Editar Perfil</router-link
@@ -68,12 +74,7 @@
 				v-bind:style="{ display: showLogout }"
 				>Logout</router-link
 			>
-			<router-link
-				class="link"
-				to="/admin"
-				v-bind:style="{ display: showAdmin }"
-				>Admin</router-link
-			>
+			
 		</div>
 		<div class="dialog">
 			<dialog :open="isDialogOpen">
@@ -237,7 +238,7 @@ nav {
 #fourthDiv {
 	display: grid;
 	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 1fr 40px;
+	grid-template-columns: 2fr 1fr 40px 1fr;
 	height: 71px;
 }
 

@@ -23,7 +23,7 @@ export default {
   margin-bottom: 40px;
   display: flex;
   align-items: center;
-  background: url(../../public/assets/photoBG.jpg);
+  background: url(../../public/assets/photoBG.webp);
   background-size: cover;
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.2) 0px -250px 300px -90px inset,

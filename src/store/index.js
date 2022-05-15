@@ -19,7 +19,7 @@ export default new Vuex.Store({
 							secondColor:
 								'invert(100%) sepia(35%) saturate(1828%) hue-rotate(299deg) brightness(99%) contrast(105%)',
 							header: 'PRECISAS DE AJUDA EM FOTOGRAFIA?',
-							video: '../../assets/bgVideoLanding.mp4',
+							video: '../../assets/bgVideoLanding.webm',
 						},
 						photos: ['https://quantocustaviajar.com/blog/wp-content/uploads/2020/03/como-tirar-fotos-sozinha-em-viagens-14.jpg'],
 						shortDescription:
@@ -56,7 +56,7 @@ export default new Vuex.Store({
 							secondColor:
 								'invert(80%) sepia(40%) saturate(178%) hue-rotate(275deg) brightness(104%) contrast(104%)',
 							header: 'PRECISAS DE AJUDA COM UM DESENHO?',
-							video: '../../assets/bgVideoLanding3.mp4',
+							video: '../../assets/bgVideoLanding3.webm',
 						},
 						photos: ['https://img.elo7.com.br/product/zoom/2CCA5F0/desenho-realista-desenho-profissional.jpg'],
 						shortDescription:
@@ -93,7 +93,7 @@ export default new Vuex.Store({
 							secondColor:
 								'invert(87%) sepia(34%) saturate(339%) hue-rotate(52deg) brightness(104%) contrast(97%)',
 							header: 'PRECISAS DE UM MODELO?',
-							video: '../../assets/bgVideoLanding5.mp4',
+							video: '../../assets/bgVideoLanding5.webm',
 						},
 						photos: ['http://blog.selfiemodels.com.br/wp-content/uploads/2017/05/modelo-fotografico-1200x800.jpg?x65681'],
 						shortDescription:
@@ -130,7 +130,7 @@ export default new Vuex.Store({
 							secondColor:
 								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
 							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
-							video: '../../assets/bgVideoLanding2.mp4',
+							video: '../../assets/bgVideoLanding2.webm',
 						},
 						photos: ['https://animalleestudio.com.br/wp-content/uploads/2019/09/video-promocional.jpg'],
 						shortDescription:
@@ -167,7 +167,7 @@ export default new Vuex.Store({
 							secondColor:
 								'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
 							header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
-							video: '../../assets/bgVideoLanding2.mp4',
+							video: '../../assets/bgVideoLanding2.webm',
 						},
 						photos: ['https://clickandplaylive.com/wp-content/uploads/2020/11/APAVT-Promo-Tutorial-Oculos-360-Video-Promocional.jpg'],
 						shortDescription:
@@ -204,7 +204,7 @@ export default new Vuex.Store({
 							secondColor:
 								'invert(100%) sepia(35%) saturate(1828%) hue-rotate(299deg) brightness(99%) contrast(105%)',
 							header: 'PRECISAS DE AJUDA EM FOTOGRAFIA?',
-							video: '../../assets/bgVideoLanding.mp4',
+							video: '../../assets/bgVideoLanding.webm',
 						},
 						photos: ['https://pdimagemecarreira.com/principal/wp-content/uploads/2019/01/271651-desafios-profissionais-voce-esta-preparado-para-2019.jpg'],
 						shortDescription:
@@ -255,7 +255,7 @@ export default new Vuex.Store({
 				secondColor:
 					'invert(100%) sepia(35%) saturate(1828%) hue-rotate(299deg) brightness(99%) contrast(105%)',
 				header: 'PRECISAS DE AJUDA EM FOTOGRAFIA?',
-				video: '../../assets/bgVideoLanding.mp4',
+				video: '../../assets/bgVideoLanding.webm',
 			},
 			{
 				id: 1,
@@ -264,7 +264,7 @@ export default new Vuex.Store({
 				secondColor:
 					'invert(78%) sepia(26%) saturate(569%) hue-rotate(307deg) brightness(108%) contrast(108%)',
 				header: 'PRECISAS DE AJUDA COM UM VÍDEO?',
-				video: '../../assets/bgVideoLanding2.mp4',
+				video: '../../assets/bgVideoLanding2.webm',
 			},
 			{
 				id: 2,
@@ -273,7 +273,7 @@ export default new Vuex.Store({
 				secondColor:
 					'invert(80%) sepia(40%) saturate(178%) hue-rotate(275deg) brightness(104%) contrast(104%)',
 				header: 'PRECISAS DE AJUDA COM UM DESENHO?',
-				video: '../../assets/bgVideoLanding3.mp4',
+				video: '../../assets/bgVideoLanding3.webm',
 			},
 			{
 				id: 3,
@@ -282,7 +282,7 @@ export default new Vuex.Store({
 				secondColor:
 					'invert(86%) sepia(16%) saturate(873%) hue-rotate(175deg) brightness(105%) contrast(104%)',
 				header: 'PRECISAS DE AJUDA EM WEB DESIGN?',
-				video: '../../assets/bgVideoLanding4.mp4',
+				video: '../../assets/bgVideoLanding4.webm',
 			},
 			{
 				id: 4,
@@ -291,7 +291,7 @@ export default new Vuex.Store({
 				secondColor:
 					'invert(87%) sepia(34%) saturate(339%) hue-rotate(52deg) brightness(104%) contrast(97%)',
 				header: 'PRECISAS DE UM MODELO?',
-				video: '../../assets/bgVideoLanding5.mp4',
+				video: '../../assets/bgVideoLanding5.webm',
 			},
 		],
 		search: '',

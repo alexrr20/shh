@@ -13,9 +13,7 @@
 			</div>
 			<div class="secondContainer">
 				<h4>Informações do Utilizador</h4>
-				<div class="divider"></div>
-				<button>Editar</button>
-
+				
 				<div class="editContainer">
 					<div class="infoContainer nameContainer">
 						<span>Primeiro Nome</span>
@@ -47,11 +45,17 @@
 			<div class="thirdContainer">
 				<h4>Editar Palavra-passe</h4>
 				<div class="divider"></div>
-				<div class="passContainer">
+				<div class="formContainer">
 					<form>
 						<label for="actualPass">Palavra-passe atual</label>
-						<input type="password" name="" id="" />
+						<input type="password" name="" id="" v-model="password" />
+						<br>
+						<label for="newPass">Palavra-passe Nova</label>
+						<input type="password" name="" id="" v-model="newPassword" />
 					</form>
+				</div>
+				<div class="submitContainer">
+					<button @click="checkPass()">Editar</button>
 				</div>
 			</div>
 		</div>
@@ -63,10 +67,21 @@ import { mapGetters } from 'vuex';
 export default {
 	name: 'EditProfile',
 	data() {
-		return {};
+		return {
+			password:'',
+			newPassword: '',
+		};
 	},
 	computed: {
 		...mapGetters(['getLoggedUser']),
+	},
+	methods: {
+		checkPass() {
+			if(this.password == this.getLoggedUser.password){
+				this.getLoggedUser.password = this.newPassword;
+				alert('PASSWORD ALTERADA!')
+			}
+		}
 	},
 };
 </script>
@@ -126,8 +141,32 @@ img{
 
 .divider {
 	width: 100%;
-	height: 1px;
+	height: 0px;
 	background-color: #bababa;
+}
+
+.submitContainer button {
+	width: 10%;
+	background-color: black;
+	height: 37px;
+	border: 0;
+	outline: 3px solid white;
+	outline-offset: -2px;
+	color: white;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 700;
+	box-sizing: border-box;
+	padding-top: 3px;
+	margin-left: 30px;
+	margin-top:15px;
+	margin-bottom: 1px;
+	cursor: pointer;
+	transition: all 0.08s ease-in-out;
+	font-size: 20px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .editContainer {
@@ -163,5 +202,20 @@ img{
 .emailContainer {
 	grid-row: 1/2;
 	grid-column: 4/5;
+}
+
+.formContainer input {
+	box-sizing: border-box;
+	max-width: 300px;
+	width: 30%;
+	height: 20px;
+	background-color: white;
+	border: 0;
+	color: black;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 600;
+	outline: none;
+	padding-left: 20px;
+	margin-top: 15px;
 }
 </style>

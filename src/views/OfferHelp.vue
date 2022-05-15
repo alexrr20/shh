@@ -68,7 +68,7 @@
 		</div>
 		<div class="descriptionContainer">
 			<h3>Adiciona o link de uma foto ilustrativa do teu projeto:</h3> 
-			<input type="text" placeholder="Link Fotografia" id="photoContainer" v-model="content.photos">
+			<input type="text" placeholder="Link Fotografia" id="photoContainer" v-model="content.photo">
 		</div>
 		<div class="submitContainer">
 			<router-link v-on:click.native="addPost" to="#" >Criar Anúncio</router-link>
@@ -83,16 +83,16 @@ export default {
 	data() {
 		return {
 			content:{
-				//category:'',
+				//id:  this.$store.state.posts.length,
 				shortDescription:'',
 				description: '',
 				faq:'',
-				photos:'',
+				photo:'',
 			},
 		};
 	},
 	computed: {
-		...mapGetters(['getLoggedUser']),
+		...mapGetters(['getLoggedUser','getPosts']),
 	},
 	methods: {
 		addPost() {

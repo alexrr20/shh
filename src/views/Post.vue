@@ -101,7 +101,7 @@
 		<aside>
 			<div>
 				<img
-					src="../../public/assets/profile.jpg"
+					src="../../public/assets/profile.webp"
 					alt=""
 					class="userAvatar"
 					width="70"
