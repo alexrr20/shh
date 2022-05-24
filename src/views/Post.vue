@@ -98,9 +98,12 @@
 				</div>
 				<div class="commentsContainer1">
 					<h4>Comentários</h4>
-					<div class="commentsContainer2">
+					<!-- <div class="commentsContainer2" 
+						v-for="(post, index) in posts"
+						v-bind:key="index"
+						v-bind:style="{ 'box-shadow': '5px 10px #888888' }">
 
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -191,6 +194,7 @@ export default {
 		return {
 			isOpen: false,
 			postInfo: this.$store.state.posts[this.$route.params.id],
+			//comments:this.$store.state.posts.reviews[this.$route.params.id],
 		};
 	},
 	methods: {
