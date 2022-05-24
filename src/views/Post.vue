@@ -96,6 +96,12 @@
 						>{{ postInfo.reviews.length }} Avaliações</span
 					>
 				</div>
+				<div class="commentsContainer1">
+					<h4>Comentários</h4>
+					<div class="commentsContainer2">
+
+					</div>
+				</div>
 			</div>
 		</div>
 		<aside>

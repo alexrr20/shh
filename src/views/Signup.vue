@@ -7,7 +7,7 @@
 					<div class="inputContainer">
 						<label for="firstName">Primeiro Nome</label>
 						<br />
-						<input type="text" id="firstName" v-model="form.userName" />
+						<input type="text" id="firstName" v-model="form.firstName" />
 					</div>
 					<div class="inputContainer">
 						<label for="lastName">Apelido</label>
@@ -16,6 +16,15 @@
 							type="text"
 							id="lastName"
 							v-model="form.surname"
+						/>
+					</div>
+					<div class="inputContainer">
+						<label for="username">Username</label>
+						<br />
+						<input
+							type="text"
+							id="username"
+							v-model="form.username"
 						/>
 					</div>
 					<div class="inputContainer">
@@ -110,8 +119,9 @@ export default {
 	data() {
 		return {
 			form: {
-				userName: '',
+				firstName: '',
 				surname: '',
+				username:'',
 				number: '',
 				course:'',
 				year:'',
@@ -173,8 +183,8 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 170px;
-	margin-bottom: 100px;
+	margin-top: 240px;
+	margin-bottom: 150px;
 	height: 155vh;
 }
 

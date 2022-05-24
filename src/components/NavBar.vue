@@ -59,7 +59,7 @@
 				v-bind:style="{ display: showEdit }"
 				>Editar Perfil</router-link
 			>
-			<router-link class="link" to="signup">Sign Up</router-link>
+			<router-link class="link" to="signup" v-bind:style="{ display: showSignup }">Sign Up</router-link>
 			<router-link
 				class="link"
 				v-on:click.native="showDialog"
@@ -131,6 +131,7 @@ export default {
 			isDialogOpen: false,
 			showEdit: 'none',
 			showLogin: 'inline',
+			showSignup: 'inline',
 			showLogout: 'none',
 			showAdmin: 'none',
 		};
@@ -143,6 +144,7 @@ export default {
 			if (this.isUser(this.email, this.password)) {
 				this.SET_LOGGED_USER(this.email);
 				this.showLogin = 'none';
+				this.showSignup = 'none';
 				this.showLogout = 'inline';
 				this.showEdit = 'inline';
 				if(this.getLoggedUser.type == 'admin'){
@@ -158,6 +160,7 @@ export default {
 			this.SET_LOGOUT(this.email);
 			this.showLogin = 'inline';
 			this.showLogout = 'none';
+			this.showSignup = 'inline';
 			this.showEdit = 'none';
 			this.showAdmin = 'none';
 		},
@@ -236,9 +239,10 @@ nav {
 }
 
 #fourthDiv {
+	margin-right:6px;
 	display: grid;
 	grid-template-rows: 1fr;
-	grid-template-columns: 2fr 1fr 40px 1fr;
+	grid-template-columns: auto auto auto auto;
 	height: 71px;
 }
 
