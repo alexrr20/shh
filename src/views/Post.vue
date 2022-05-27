@@ -98,12 +98,8 @@
 				</div>
 				<div class="commentsContainer1">
 					<h4>Comentários</h4>
-					<!-- <div class="commentsContainer2" 
-						v-for="(post, index) in posts"
-						v-bind:key="index"
-						v-bind:style="{ 'box-shadow': '5px 10px #888888' }">
-
-					</div> -->
+					<div class="commentsContainer2">
+					</div>
 				</div>
 			</div>
 		</div>
