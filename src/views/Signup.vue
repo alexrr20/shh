@@ -141,14 +141,18 @@ export default {
 			? JSON.parse(localStorage.users)
 			: [
 					{
-						userID: 444,
-						userName: 'Pedro',
-						surname: 'Gomes',
-						email: 'admin@admin.com',
+						firstName: 'Pedro',
+						surname: 'Silva',
+						username:'pms',
+						number: '123465789',
+						course:'TSIW',
+						year:'2',
+						dob: '2001-12-12',
+						email: 'admin@shh.pt',
+						nif: '123456789',
+						photo:'https://static1.dermaclub.com.br/articles/7/52/27/@/11757-xxx-article_media_header_mobile-2.jpg',
 						password: 'admin',
-						type: 'admin',
-						dob: '2001-03-17',
-						nif: '',
+						type:'admin',
 						helper: true,
 					},
 			  ];
