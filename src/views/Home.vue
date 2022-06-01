@@ -34,21 +34,32 @@
 			<div class="headerContainer2 header1">
 				<h1>Eleva o teu projeto</h1>
 				<span
-					>Secalhar precisas de um website para exibir as tuas fotos,
-					ou talvez queiras um vídeo promocional para o teu projeto.
-					Os teus colegas ajudantes conseguem fazer isto e muito
-					mais.</span
+					>Secalhar precisas de um website para exibir as tuas fotos, ou talvez
+					queiras um vídeo promocional para o teu projeto. Os teus colegas
+					ajudantes conseguem fazer isto e muito mais.</span
 				>
 			</div>
 			<span class="ou">ou</span>
 			<div class="headerContainer2 header2">
 				<h1>Ajuda outros colegas</h1>
 				<span
-					>Secalhar precisas de um website para exibir as tuas fotos,
-					ou talvez queiras um vídeo promocional para o teu projeto.
-					Os teus colegas ajudantes conseguem fazer isto e muito
-					mais.</span
+					>Secalhar precisas de um website para exibir as tuas fotos, ou talvez
+					queiras um vídeo promocional para o teu projeto. Os teus colegas
+					ajudantes conseguem fazer isto e muito mais.</span
 				>
+			</div>
+			<div class="postsContainer">
+				<div class="postsLeft">
+					<div class="postContainer"><img src="../../public/assets/posts/post1.png" alt="" class="post">
+					<div class="infoContainer"><span>+ info</span></div></div>
+					<div class="postContainer"><img src="../../public/assets/posts/post2.png" alt="" class="post"></div>
+					<div class="postContainer"><img src="../../public/assets/posts/post3.png" alt="" class="post"></div>
+				</div>
+				<div class="postsRight">
+					<div class="postContainer"><img src="../../public/assets/posts/post1.png" alt="" class="post"></div>
+					<div class="postContainer"><img src="../../public/assets/posts/post2.png" alt="" class="post"></div>
+					<div class="postContainer"><img src="../../public/assets/posts/post3.png" alt="" class="post"></div>
+				</div>
 			</div>
 		</div>
 		<div class="container3">
@@ -78,12 +89,9 @@
 					<router-link to="OfferHelp">Começa já</router-link>
 				</div>
 				<div class="advantagesContainer">
-					<span>
-						<span class="plus">+ </span>Melhoras o teu
-						currículo</span
+					<span> <span class="plus">+ </span>Melhoras o teu currículo</span
 					><span
-						><span class="plus">+ </span>Praticas as tuas
-						capacidades
+						><span class="plus">+ </span>Praticas as tuas capacidades
 					</span>
 				</div>
 			</div>
@@ -104,7 +112,7 @@
 
 <script>
 export default {
-	name: 'Home',
+	name: "Home",
 	components: {},
 	data() {
 		return {
@@ -130,8 +138,8 @@ export default {
 #videoBG {
 	position: fixed;
 	z-index: -1;
-	min-width: 100%;
-	min-height: 100%;
+	width: 100%;
+	height: auto;
 }
 
 .headerContainer1 {
@@ -144,7 +152,7 @@ export default {
 .headerContainer1 h1 {
 	margin: 0;
 	padding: 0;
-	font-family: 'gilroy', sans-serif;
+	font-family: "gilroy", sans-serif;
 	color: white;
 	font-weight: 1000;
 	font-size: 116px;
@@ -169,7 +177,7 @@ export default {
 .exploreLinkContainer a {
 	text-decoration: none;
 	color: white;
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	font-weight: 700;
 	font-size: 20px;
 	display: flex;
@@ -188,16 +196,20 @@ export default {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position:relative;
+
 }
 
 .headerContainer2 {
 	max-width: 830px;
 	text-align: center;
+	z-index:2;
+	pointer-events: none; 
 }
 
 .headerContainer2 h1 {
 	font-size: 84px;
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	font-weight: 900;
 	text-align: center;
 	line-height: 88.5%;
@@ -205,13 +217,13 @@ export default {
 }
 
 .headerContainer2 span {
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	font-weight: 600;
 	color: #b4b4b4;
 }
 
 .ou {
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	margin-top: 20px;
 	font-weight: 900;
 	font-size: 30px;
@@ -229,7 +241,7 @@ export default {
 
 .container3 h1 {
 	color: black;
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	font-size: 84px;
 	font-weight: 900;
 	padding-left: 1%;
@@ -303,7 +315,7 @@ export default {
 .bannerContainer a {
 	text-decoration: none;
 	color: white;
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	margin-bottom: 85px;
 	font-size: 23px;
 	font-weight: 700;
@@ -341,7 +353,7 @@ export default {
 	grid-column: 1/3;
 	margin: 0;
 	color: white;
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	font-size: 82px;
 	font-weight: 800;
 	line-height: 94%;
@@ -358,7 +370,7 @@ export default {
 .routerContainer a {
 	color: white;
 	text-decoration: none;
-	font-family: 'gilroy', sans-serif;
+	font-family: "gilroy", sans-serif;
 	border: 4px solid white;
 	width: 240px;
 	height: 57px;
@@ -378,7 +390,7 @@ export default {
 
 .advantagesContainer span {
 	color: white;
-	font-family: 'gilroy', sans-serif;
+	font-family: "gilroy", sans-serif;
 	font-size: 32px;
 	font-weight: 700;
 }
@@ -404,14 +416,115 @@ export default {
 
 .contentContainer2 h1 {
 	margin: 0 auto 0 0;
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	font-size: 33px;
 }
 
 .contentContainer2 h2 a {
 	color: black;
 	text-decoration: none;
-	font-family: 'Gilroy', sans-serif;
+	font-family: "Gilroy", sans-serif;
 	margin-right: 50px;
+}
+
+
+.postsContainer{
+	height: 100%;
+	display:flex;
+	justify-content: space-between;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.postsLeft{
+	display:grid;
+	grid-template-rows: 2fr 0.5fr 2fr 0.5fr 2fr;
+	height:100%;
+	transform:translate(-130px)
+}
+
+.postsRight{
+	display:grid;
+	grid-template-rows: 2fr 0.5fr 2fr 0.5fr 2fr;
+	height:100%;
+	transform:translate(130px)
+}
+
+.post{
+	height: 100px;
+	cursor:pointer;
+	opacity:0.5;
+	transition: opacity 70ms ease-in-out;
+	box-shadow: 5px 10px 27px 0px rgba(0,0,0,0.10);
+}
+
+.post:hover{
+	opacity:1;
+	transition: opacity 70ms ease-in-out;
+}
+
+.postContainer{
+	display: flex;
+	align-items: center;
+	position:relative;
+}
+
+.infoContainer{
+	position: absolute;
+	top:55%;
+	left:0;
+	background-color: black;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	color: white;
+	height:40px;
+	font-family: "Gilroy", sans-serif;
+	cursor:pointer;
+}
+
+.postsLeft .postContainer:nth-child(2){
+	grid-row: 3/4;
+	transform:translate(-50px)
+
+}
+
+.postsLeft .postContainer:nth-child(3){
+	grid-row: 5/6;
+	transform:translate(-20px)
+}
+
+.postsRight .postContainer:nth-child(2){
+	grid-row: 3/4;
+	transform:translate(50px)
+}
+
+.postsRight .postContainer:nth-child(3){
+	grid-row: 5/6;
+	transform:translate(20px)
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+        width:auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
 }
 </style>

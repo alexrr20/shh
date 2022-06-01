@@ -72,9 +72,16 @@
 				</div>
 			</aside>
 			<div class="mainContentContainer">
-				<div class="sortContainer">
+				<div
+				class="sortContainer"
+				@click="toggleSortMenu()"
+				:aria-expanded="isOpen"
+      			:aria-controls="`collapse${_uid}`">
 					<span>Ordenar por:</span>
 					<div><span>Gostos &#40;ascendente&#41;</span></div>
+				</div>
+				<div class="sortMenuContent" v-show="isOpen" :id="`collapse${_uid}`">
+					<div class="sortItemsContainer"><div><span>Alfabética</span></div><div><span>Alfabética (Descendente)</span></div></div>
 				</div>
 				<PostCards />
 			</div>
@@ -99,6 +106,7 @@ export default {
 			posts: this.$store.state.posts,
 			arrayCategories: this.$store.state.arrayCategories,
 			banner: false,
+			isOpen: false
 		};
 	},
 	methods: {
@@ -112,6 +120,9 @@ export default {
 				this.banner = true;
 			}
 		},
+		toggleSortMenu(){
+			this.isOpen = !this.isOpen;
+		}
 	},
 	created() {
 		this.checkBanner();
@@ -227,5 +238,21 @@ aside h4 {
 	margin-left: 20px;
 	cursor: pointer;
 	padding: 8px 20px;
+}
+
+.sortMenuContent{
+	background-color:black;
+	color:white;
+	height: 40px;
+	margin-top: 10px;
+	width:90%;
+	margin-left:98px;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+}
+
+.sortItemsContainer{
+	display: flex;
 }
 </style>
