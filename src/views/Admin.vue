@@ -18,7 +18,7 @@
                     </tr>
                     <tr v-for="(user, index) in getUsers" :key="index">
                         <td>{{ index + 1 }}</td>
-                        <td>{{ user.userName }} {{ user.surname }}</td>
+                        <td>{{ user.firstName }} {{ user.surname }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.number }}</td>
                         <td>{{ user.nif }}</td>

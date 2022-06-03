@@ -98,12 +98,36 @@
 				</div>
 				<div class="commentsContainer1">
 					<h4>Comentários</h4>
-					<!-- <div class="commentsContainer2" 
-						v-for="(post, index) in posts"
-						v-bind:key="index"
-						v-bind:style="{ 'box-shadow': '5px 10px #888888' }">
-
-					</div> -->
+						<div class="cardComments">
+							<div class="commentsContainer2">
+								<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+								<h4>João Silva</h4>
+								<h5>@joaos99</h5>
+							</div>	
+							<div class="commentsContainer3">
+								<h6>Ajudou imenso</h6>
+							</div>
+						</div>	
+						<div class="cardComments">
+							<div class="commentsContainer2">
+								<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+								<h4>João Silva</h4>
+								<h5>@joaos99</h5>
+							</div>	
+							<div class="commentsContainer3">
+								<h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad provident quod qui velit quis nesciunt laborum omnis dolorum. Debitis qui dicta eaque, libero explicabo quae consequatur adipisci ipsum asperiores atque?</h6>
+							</div>
+						</div>
+						<div class="cardComments">
+							<div class="commentsContainer2">
+								<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+								<h4>João Silva</h4>
+								<h5>@joaos99</h5>
+							</div>	
+							<div class="commentsContainer3">
+								<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam incidunt, dicta non debitis ipsa suscipit aut sunt totam laudantium consequuntur porro illo et eos corporis, rerum enim fugiat tempora esse.</h6>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -401,5 +425,46 @@ h5 {
 	width: 700px;
 	height: 500px;
 	object-fit:cover;
+}
+.cardComments {
+	padding-top: 1px;
+	padding-bottom: 10px;
+	padding-left:10px;
+	box-shadow: 0 7px 5px rgba(0,0,0,0.2);	
+}
+
+.commentsContainer2{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+
+.commentsContainer2 img{
+	border-radius: 50%;
+	width: 65px;
+	height: 65px;
+	
+}
+.commentsContainer2 h4{
+	font-size: 95%;
+	margin-top:10px;
+	margin-left: 6px;
+}
+.commentsContainer2 h5{
+	color:grey;
+	font-size: 75%;
+	margin-top:18px;
+	margin-left: -70px; 
+
+}
+
+.commentsContainer3 h6{
+	font-family:'Gilroy', sans-serif;
+	font-weight:540;
+	font-size: 90%;
+	margin-top:-5px;
+	margin-left: 70px; 
+
 }
 </style>

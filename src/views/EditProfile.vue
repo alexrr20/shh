@@ -9,7 +9,7 @@
 					width="100"
 					height="100"
 				/>
-				<h1>Olá {{ getLoggedUser.userName }}!</h1>
+				<h1>Olá {{ getLoggedUser.firstName }}!</h1>
 			</div>
 			<div class="secondContainer">
 				<h4>Informações do Utilizador</h4>
@@ -17,7 +17,7 @@
 				<div class="editContainer">
 					<div class="infoContainer nameContainer">
 						<span>Primeiro Nome</span>
-						<span class="value">{{ getLoggedUser.userName }}</span>
+						<span class="value">{{ getLoggedUser.firstName }}</span>
 					</div>
 					<div class="infoContainer surnameContainer">
 						<span>Apelido</span>
@@ -47,11 +47,13 @@
 				<div class="divider"></div>
 				<div class="formContainer">
 					<form>
-						<label for="actualPass">Palavra-passe atual</label>
-						<input type="password" name="" id="" v-model="password" />
-						<br>
-						<label for="newPass">Palavra-passe Nova</label>
-						<input type="password" name="" id="" v-model="newPassword" />
+						<div class="passContainer">
+							<label for="actualPass">Palavra-passe atual</label>
+							<input type="password" name="" placeholder="Palavra-passe atual" v-model="password" />
+							<br>
+							<label for="newPass">Palavra-passe Nova</label>
+							<input type="password" name="" placeholder="Palavra-passe atual" v-model="newPassword" />
+						</div>	
 					</form>
 				</div>
 				<div class="submitContainer">
@@ -145,6 +147,19 @@ img{
 	background-color: #bababa;
 }
 
+.passContainer input {
+	box-sizing: border-box;
+	max-width: 500px;
+	width: 100%;
+	height: 45px;
+	background-color:white;
+	border: 0;
+	color: black;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 600;
+	outline: none;
+	padding-left: 20px;
+}
 .submitContainer button {
 	width: 10%;
 	background-color: black;
