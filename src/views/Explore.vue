@@ -4,8 +4,7 @@
 		<router-view></router-view>
 		<div
 			class="contentContainer"
-			v-bind:class="{ contentContainerBanner: banner }"
-		>
+			v-bind:class="{ contentContainerBanner: banner }">
 			<aside>
 				<h4>Filtros</h4>
 				<div class="filterContainer">

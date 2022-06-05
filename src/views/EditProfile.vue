@@ -44,16 +44,18 @@
 
 			<div class="thirdContainer">
 				<h4>Editar Palavra-passe</h4>
-				<div class="divider"></div>
+				<!-- <div class="divider"></div> -->
 				<div class="formContainer">
 					<form>
-						<div class="passContainer">
-							<label for="actualPass">Palavra-passe atual</label>
-							<input type="password" name="" placeholder="Palavra-passe atual" v-model="password" />
+						<!-- <div class="passContainer"> -->
+							<label for="actualPass">Palavra-passe atual:</label>
+							<input type="password" name="" id="currentPassword" placeholder="Palavra-passe atual" v-model="password" />
 							<br>
-							<label for="newPass">Palavra-passe Nova</label>
-							<input type="password" name="" placeholder="Palavra-passe atual" v-model="newPassword" />
-						</div>	
+							<div class="oldPass">
+								<label for="newPass">Palavra-passe nova:</label>
+								<input type="password" name="" id="oldPassword" placeholder="Palavra-passe nova" v-model="newPassword" />
+							</div>
+						<!-- </div>	 -->
 					</form>
 				</div>
 				<div class="submitContainer">
@@ -141,25 +143,12 @@ img{
 	font-size: 21px;
 }
 
-.divider {
+/* .divider {
 	width: 100%;
 	height: 0px;
 	background-color: #bababa;
-}
+} */
 
-.passContainer input {
-	box-sizing: border-box;
-	max-width: 500px;
-	width: 100%;
-	height: 45px;
-	background-color:white;
-	border: 0;
-	color: black;
-	font-family: 'gilroy', sans-serif;
-	font-weight: 600;
-	outline: none;
-	padding-left: 20px;
-}
 .submitContainer button {
 	width: 10%;
 	background-color: black;
@@ -219,11 +208,36 @@ img{
 	grid-column: 4/5;
 }
 
+label {
+	padding-left: 45px;
+	display: inline-block;
+	font-weight: 400;
+	font-size: 15px;
+	transition: all 0.06s ease-in;
+	margin-bottom: 5px;
+}
+
 .formContainer input {
 	box-sizing: border-box;
 	max-width: 300px;
 	width: 30%;
-	height: 20px;
+	height: 25px;
+	background-color: white;
+	border: 0;
+	color: black;
+	font-family: 'gilroy', sans-serif;
+	font-weight: 600;
+	outline: none;
+	padding-left: 20px;
+	margin-top: -3px;
+	margin-left: 15px;
+}
+
+.oldPass input {
+	box-sizing: border-box;
+	max-width: 300px;
+	width: 30%;
+	height: 25px;
 	background-color: white;
 	border: 0;
 	color: black;
@@ -232,5 +246,6 @@ img{
 	outline: none;
 	padding-left: 20px;
 	margin-top: 15px;
+	margin-left: 18px;
 }
 </style>
