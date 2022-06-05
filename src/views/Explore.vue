@@ -5,7 +5,7 @@
 		<div
 			class="contentContainer"
 			v-bind:class="{ contentContainerBanner: banner }">
-			<!-- <aside>
+			<aside>
 				<h4>Filtros</h4>
 				<div class="filterContainer">
 					<AsideAccordion>
@@ -69,7 +69,7 @@
 						<template v-slot:content> </template>
 					</AsideAccordion>
 				</div>
-			</aside> -->
+			</aside>
 			<div class="mainContentContainer">
 				<div
 				class="sortContainer"
@@ -90,14 +90,14 @@
 
 <script>
 import CategoriesBar from '../components/CategoriesBar.vue';
-// import AsideAccordion from '../components/AsideAccordion.vue';
+import AsideAccordion from '../components/AsideAccordion.vue';
 import PostCards from '../components/PostCards.vue';
 
 export default {
 	name: 'Explore',
 	components: {
 		CategoriesBar,
-		// AsideAccordion,
+		AsideAccordion,
 		PostCards,
 	},
 	data() {
