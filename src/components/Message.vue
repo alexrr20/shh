@@ -1,18 +1,36 @@
 <template>
-  <div class="messageContainer">
-      <div class="messageHeader">
-          <h2>Maria</h2>
-          <h3>14 de Dezembro de 2021 às 18:30h</h3>
-      </div>
-      <div class="messageContent">
-          Olá, como estás? Antes de mais queria agradecer por me contactares, eu queria saber se tens alguma ideia para o poster? 
-      </div>
-  </div>
+    <div class="mainContainer">
+        <div  v-for="(message,index) in selectedContact" v-bind:key="index">
+            <div class="messageContainer">
+                <div class="messageHeader">
+                    <h2>{{selectedContact.userID}}</h2>
+                    <h3>14 de Dezembro de 2021 às 18:30h</h3>
+                </div>
+                <div class="messageContent">
+                    h1
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-    name:"Message"
+    name:"Message",
+    data() {
+        return {
+            selectedContact: this.$store.state.selectedContact,
+        }
+    },
+    created () {
+        console.log(this.$store.state.selectedContact);
+    },
+    watch:{
+        print(){
+        console.log(this.$store.state.selectedContact);
+
+        }
+    }
 }
 </script>
 

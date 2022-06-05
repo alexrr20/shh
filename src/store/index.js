@@ -301,6 +301,32 @@ export default new Vuex.Store({
 		],
 		search: '',
 		filteredPosts: [],
+		messages: [{
+			userID: "525",
+			content: [{
+				type: "outgoing",
+				messageBody: "Olá, como estás? Antes de mais queria agradecer por me contactares, eu queria saber se tens alguma ideia para o poster?",
+				time: "14 de Dezembro de 2021 às 18:30h"
+			},{
+				type: "incoming",
+				messageBody: "Olá, estou bem! Eu estou a desenvolver um projeto que é uma aplicação de visualização de filmes e séries, uma espécie de Netflix. Eu gostava que o poster fosse colorido e chamativo, mas ainda não tens nenhuma ideia em concreto, gostava que fizesses alguns exemplos também. Obrigado!",
+				time: "14 de Dezembro de 2021 às 21:23h"
+			}]
+		  },
+		  {
+			userID: "113",
+			content: [{
+				type: "outgoing",
+				messageBody: "Olá, como estás? Antes de mais queria agradecer por me contactares, eu queria saber se tens alguma ideia para o poster?",
+				time: "14 de Dezembro de 2021 às 18:30h"
+			},{
+				type: "incoming",
+				messageBody: "Olá, estou bem! Eu estou a desenvolver um projeto que é uma aplicação de visualização de filmes e séries, uma espécie de Netflix. Eu gostava que o poster fosse colorido e chamativo, mas ainda não tens nenhuma ideia em concreto, gostava que fizesses alguns exemplos também. Obrigado!",
+				time: "14 de Dezembro de 2021 às 21:23h"
+			}]
+		  }
+		],
+		selectedContact: {}
 	},
 	getters: {
 		isUser: (state) => (email, password) =>

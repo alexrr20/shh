@@ -3,30 +3,15 @@
         <div class="contentContainer">
             <aside>
                 <h4>Contactos</h4>
-                <div class="contactsContainer">
-                    <div class="contactContainer">
+                <div class="contactsContainer" v-for="(contact,index) in messages" v-bind:key="index">
+                    <div class="contactContainer" @click="selectContact(contact)">
                         <div class="contactTop">
-                            <div class="nomeContainer"><span>Nome1</span></div>
+                            <div class="nomeContainer"><span>{{contact.userID}}</span></div>
                             <div class="categoriaContainer"><span>Categoria1</span></div>
                             </div>
                         <div class="contactBottom"><span>Online há 3 dias</span></div>
                     </div>
                     <span class="divider"></span>
-                    <div class="contactContainer">
-                        <div class="contactTop">
-                            <div class="nomeContainer"><span>Nome1</span></div>
-                            <div class="categoriaContainer"><span>Categoria1</span></div>
-                            </div>
-                        <div class="contactBottom"><span>Online há 3 dias</span></div>
-                    </div>
-                    <span class="divider"></span>
-                    <div class="contactContainer">
-                        <div class="contactTop">
-                            <div class="nomeContainer"><span>Nome1</span></div>
-                            <div class="categoriaContainer"><span>Categoria1</span></div>
-                            </div>
-                        <div class="contactBottom"><span>Online há 3 dias</span></div>
-                    </div>
                 </div>
             </aside>
             <div class="mainContentContainer">
@@ -56,6 +41,17 @@ import Message from '../components/Message.vue';
     export default {
         name:'Messages',
         components:{ Message },
+        data() {
+            return {
+                messages: this.$store.state.messages
+            }
+        },
+        methods: {
+            selectContact(contact) {
+                this.$store.state.selectedContact = contact
+                console.log(this.$store.state.selectedContact);
+            }
+        },
     }
 </script>
 
