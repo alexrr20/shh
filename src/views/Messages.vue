@@ -18,7 +18,7 @@
                 <div class="chatMainContainer">
                     <div class="chatHeader">
                         <div class="chatHeaderLeft">              
-                            <h2>Maria</h2>
+                            <h2>José</h2>
                             <h4>Desenho</h4>
                         </div>
                         <div class="chatHeaderRight">
@@ -29,6 +29,22 @@
                     <div class="messagesContainer">
                         <Message/>
                     </div>
+                    <editor
+                        api-key=process.env.VUE_APP_TINYEDITOR
+                        :init="{
+                            height: 500,
+                            menubar: false,
+                            plugins: [
+                            'advlist autolink lists link image charmap print preview anchor',
+                            'searchreplace visualblocks code fullscreen',
+                            'insertdatetime media table paste code help wordcount'
+                            ],
+                            toolbar:
+                            'undo redo | formatselect | bold italic backcolor | \
+                            alignleft aligncenter alignright alignjustify | \
+                            bullist numlist outdent indent | removeformat | help'
+                        }"
+                    />
                 </div>
             </div>
         </div>
@@ -37,10 +53,13 @@
 
 <script>
 import Message from '../components/Message.vue';
+import Editor from '@tinymce/tinymce-vue'
 
     export default {
         name:'Messages',
-        components:{ Message },
+        components:{ 
+        'editor':Editor,
+        Message },
         data() {
             return {
                 messages: this.$store.state.messages

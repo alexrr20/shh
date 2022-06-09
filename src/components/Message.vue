@@ -1,13 +1,17 @@
 <template>
-    <div class="mainContainer">
-        <div  v-for="(message,index) in selectedContact" v-bind:key="index">
-            <div class="messageContainer">
+    <div class="messagesContainer2">
+        <div v-for="(message,index) in selectedContact.content" v-bind:key="index">
+            <div class="messageContainer" :style="[message.type == 'incoming' ? {'background-color': '#000'} : {'background-color': '#E4E4E4'}]">
                 <div class="messageHeader">
-                    <h2>{{selectedContact.userID}}</h2>
-                    <h3>14 de Dezembro de 2021 às 18:30h</h3>
+                    <h2
+                    v-if="message.type == 'outgoing'"
+                    style="color: #000"
+                    >Eu</h2>
+                    <h2 v-else style="color: #FFF">{{selectedContact.userID}}</h2>
+                    <h3>{{message.time}}</h3>
                 </div>
                 <div class="messageContent">
-                    h1
+                    {{message.messageBody}}
                 </div>
             </div>
         </div>
@@ -17,24 +21,18 @@
 <script>
 export default {
     name:"Message",
-    data() {
-        return {
-            selectedContact: this.$store.state.selectedContact,
-        }
+    computed: {
+        selectedContact: function() {
+            return this.$store.state.selectedContact
+        }        
     },
-    created () {
-        console.log(this.$store.state.selectedContact);
+    updated () {
+        console.log(this.selectedContact);
     },
-    watch:{
-        print(){
-        console.log(this.$store.state.selectedContact);
-
-        }
-    }
 }
 </script>
 
-<style>
+<style scoped>
     .messageContainer{
         background-color: #E4E4E4;
         padding:30px 40px 30px 40px;
